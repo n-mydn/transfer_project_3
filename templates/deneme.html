@@ -1,0 +1,459 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% load i18n %}
+{% load static %}
+{{form.media}}
+<form method="POST" action="" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-4">
+            <b><label for="name" style = "color:#764409;">{% trans 'Ad Soyad' %}:</label></b><br>
+            {{form.name_surname}}<br>
+        </div>
+        <div class="col-md-4">
+            <b><label for="email" style = "color:#764409;">{% trans 'E-Posta' %}:</label></b><br>
+            {{form.email}}<br>
+        </div><br>
+        <div class="col-md-4">
+            <b><label for="phonenumber" style = "color:#764409;">{% trans 'Telefon Numarası' %}:</label></b><br>
+            {{form.phonenumber}}<br>
+        </div><br>
+    </div><br>
+    <h6 style ="color: #8b4513;">&emsp;{% trans "Geliş Transfer Bilgileri" %}</h6>
+    <hr color="#764409" size="4">
+    <div class="row">
+        <div class="col-md-4">
+            <b><label for="date" style = "color:#764409;">{% trans 'Transfer Tarihi' %}:</label></b><br>
+            {{form.date}}<br>
+        </div>
+        <div class="col-md-4">
+            <b><label for="planetime" style = "color:#764409;">{% trans 'Uçak İniş Saati' %}:</label></b><br>
+            {{form.planetime}}<br>
+        </div>
+        <div class="col-md-4">
+            <b><label for="flightnumber" style = "color:#764409;">{% trans 'Uçuş No' %}:</label></b><br>
+            {{form.flightnumber}}<br>
+        </div>
+    </div><br><br>
+    <h6 style ="color: #8b4513;">&emsp;{% trans "Yolcu Bilgileri" %}</h6>
+    <hr color="#764409" size="4">
+    {% for i in people  %}
+    <div class="col-md-4">
+        <b><label for="person{{i}}" style = "color:#764409;">{{i}}. {% trans 'Yolcu' %}:</label></b><br>
+        <input name="person{{i}}" class="form-control" placeholder="{% trans "Ad Soyad" %}">
+    </div>
+    {% endfor %}<br><br>
+    <div class="row">
+        <div class="form-check">
+            <input type="checkbox" name="id_status" class="form-check-label" style= "color:#764409;" id="id_status" data-bs-toggle="collapse" data-bs-target="#collapseExampleMessages" aria-controls="collapseExampleMessages" aria-expanded="false"> 
+            <label for="id_status">{% trans "Özel Karşılama istiyorum" %}</label>
+            <!--
+            <input type="checkbox" name="status" id="id_status" class="form-check-label" style= "color:#764409;" for="flexCheckChecked1" data-bs-toggle="collapse" data-bs-target="#collapseExampleMessages" aria-controls="collapseExampleMessages" aria-expanded="false">
+            <label class="form-check-label" style= "color:#764409;" for="flexCheckChecked1" data-bs-toggle="collapse" data-bs-target="#collapseExampleMessages" aria-controls="collapseExampleMessages" aria-expanded="false">{% trans "Özel Karşılama istiyorum" %}</label>-->
+            <div class="collapse" id="collapseExampleMessages"><br>
+              <div class="card card-body">
+                <div class="col-md-6">
+                    <b><label for="messages" style = "color:#764409;">{% trans 'Karşılama Mesajı' %}:</label></b>
+                    {{form.messages}}
+                </div><br>
+                <div class="col-md-6">
+                    <b><label for="specialrequest" style = "color:#764409;">{% trans 'Transferle ilgili özel isteğiniz' %}:</label></b><br>
+                    {{form.specialrequest}}
+                </div>
+            </div>
+        </div><br><br>
+    </div><br><br>
+
+    <br><h6 style ="color: #8b4513;">&emsp;{% trans "Ekstralar" %}</h6>
+                <hr color="#764409" size="4">
+                <div class="row">
+                {% for extra in extras %}
+                    <div class="col-lg-4">
+                        <div class="border h-80 p-3 border-dark p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;">
+                            <div class="row">
+                                <div class="col" style="display: flex; justify-content: center; align-items: center;">
+                                    <div class="img-div">
+                                    <img class="img-fluid" src="{{extra.extra_image.url}}" >
+                                    </div>
+                                </div>
+                                <div class="col" style="align:center">
+                                    {% if extra.name == "Su" %}
+                                    <b><label for="{{extra.name}}" style = "color:#764409;">{{extra.name}}</label></b><br>
+                                    <select class= "s-select" name="{{extra.name}}" id="id_select1">
+                                        <option value="0">{% trans "0 Adet" %}</option>
+                                        <option value="1" >{% trans "1 Adet" %} {{water_list.0}} ₺</option>
+                                        <option value="2">{% trans "2 Adet" %} {{water_list.1}} ₺</option>
+                                        <option value="3">{% trans "3 Adet" %} {{water_list.2}} ₺</option>
+                                        <option value="4">{% trans "4 Adet" %} {{water_list.3}} ₺</option>
+                                        <option value="5">{% trans "5 Adet" %} {{water_list.4}} ₺</option>
+                                        <option value="6">{% trans "6 Adet" %} {{water_list.5}} ₺</option>
+                                        <option value="7">{% trans "7 Adet" %} {{water_list.6}} ₺</option>
+                                        <option value="8">{% trans "8 Adet" %} {{water_list.7}} ₺</option>
+                                        <option value="9">{% trans "9 Adet" %} {{water_list.8}} ₺</option>
+                                        <option value="10">{% trans "10 Adet" %} {{water_list.9}} ₺</option>
+                                    </select>
+                                    {% elif extra.name == "Bira"%}
+                                    <b><label for="{{extra.name}}" style = "color:#764409;">{{extra.name}}</b> </label><br>
+                                    <select class= "s-select" name="{{extra.name}}" id="id_select2" >
+                                        <option value="0" >{% trans "0 Adet" %}</option>
+                                        <option value="{{beer_list.0}}" >{% trans "1 Adet" %} {{beer_list.0}} ₺</option>
+                                        <option value="{{beer_list.1}}" >{% trans "2 Adet" %} {{beer_list.1}} ₺</option>
+                                        <option value="{{beer_list.2}}" >{% trans "3 Adet" %} {{beer_list.2}} ₺</option>
+                                        <option value="{{beer_list.3}}" >{% trans "4 Adet" %} {{beer_list.3}} ₺</option>
+                                        <option value="{{beer_list.4}}" >{% trans "5 Adet" %} {{beer_list.4}} ₺</option>
+                                        <option value="{{beer_list.5}}" >{% trans "6 Adet" %} {{beer_list.5}} ₺</option>
+                                        <option value="{{beer_list.6}}" >{% trans "7 Adet" %} {{beer_list.6}} ₺</option>
+                                        <option value="{{beer_list.7}}" >{% trans "8 Adet" %} {{beer_list.7}} ₺</option>
+                                        <option value="{{beer_list.8}}">{% trans "9 Adet" %} {{beer_list.8}} ₺</option>
+                                        <option value="{{beer_list.9}}">{% trans "10 Adet" %} {{beer_list.9}} ₺</option>
+                                    </select>
+                                    {% elif extra.name == "Şarap"%}
+                                    <b><label for="{{extra.name}}" style = "color:#764409;">{{extra.name}}</b> </label>
+                                    <select class= "s-select" name="{{extra.name}}" id="id_select3">
+                                        <option value="0" >{% trans "0 Adet" %}</option>
+                                        <option value="{{wine_list.0}}" >{% trans "1 Adet" %} {{wine_list.0}} ₺</option>
+                                        <option value="{{wine_list.1}}" >{% trans "2 Adet" %} {{wine_list.1}} ₺</option>
+                                        <option value="{{wine_list.2}}" >{% trans "3 Adet" %} {{wine_list.2}} ₺</option>
+                                        <option value="{{wine_list.3}}" >{% trans "4 Adet" %} {{wine_list.3}} ₺</option>
+                                        <option value="{{wine_list.4}}" >{% trans "5 Adet" %} {{wine_list.4}} ₺</option>
+                                        <option value="{{wine_list.5}}" >{% trans "6 Adet" %} {{wine_list.5}} ₺</option>
+                                        <option value="{{wine_list.6}}" >{% trans "7 Adet" %} {{wine_list.6}} ₺</option>
+                                        <option value="{{wine_list.7}}" >{% trans "8 Adet" %} {{wine_list.7}} ₺</option>
+                                        <option value="{{wine_list.8}}">{% trans "9 Adet" %} {{wine_list.8}}₺</option>
+                                        <option value="{{wine_list.9}}">{% trans "10 Adet" %} {{wine_list.9}}₺</option>
+                                    </select>
+                                    {% elif extra.name == "İçecek" %}
+                                    <b><label for="{{extra.name}}" style = "color:#764409;">{{extra.name}}</label></b><br>
+                                    <select class= "s-select" name="{{extra.name}}" id="id_select4">
+                                        <option value="0">{% trans "0 Adet" %}</option>
+                                        <option value="{{drink_list.0}}">{% trans "1 Adet" %} {{drink_list.0}} ₺</option>
+                                        <option value="{{drink_list.1}}">{% trans "2 Adet" %} {{drink_list.1}} ₺</option>
+                                        <option value="{{drink_list.2}}">{% trans "3 Adet" %} {{drink_list.2}} ₺</option>
+                                        <option value="{{drink_list.3}}">{% trans "4 Adet" %} {{drink_list.3}} ₺</option>
+                                        <option value="{{drink_list.4}}">{% trans "5 Adet" %} {{drink_list.4}} ₺</option>
+                                        <option value="{{drink_list.5}}">{% trans "6 Adet" %} {{drink_list.5}} ₺</option>
+                                        <option value="{{drink_list.6}}">{% trans "7 Adet" %} {{drink_list.6}} ₺</option>
+                                        <option value="{{drink_list.7}}">{% trans "8 Adet" %} {{drink_list.7}} ₺</option>
+                                        <option value="{{drink_list.8}}">{% trans "9 Adet" %} {{drink_list.8}} ₺</option>
+                                        <option value="{{drink_list.9}}">{% trans "10 Adet" %} {{drink_list.9}} ₺</option>
+                                    </select>
+                                    {% elif extra.name == "Bebek Koltuğu" %}
+                                    <b><label for="{{extra.name}}" style = "color:#764409;">{{extra.name}}</label></b><br>
+                                    <select class= "s-select" name="{{extra.name}}" id="id_select5">
+                                        <option value="0">{% trans "0 Adet" %}</option>
+                                        <option value="{{baby_list.0}}">{% trans "1 Adet" %} {{baby_list.0}} ₺</option>
+                                        <option value="{{baby_list.1}}">{% trans "2 Adet" %} {{baby_list.1}} ₺</option>
+                                        <option value="{{baby_list.2}}">{% trans "3 Adet" %} {{baby_list.2}} ₺</option>
+                                    </select>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div><br>
+                    </div>
+                {% endfor %}
+                </div>
+
+                <!--fatura reservation-->
+                <div class="form-check">
+                    <input type="checkbox" name="id_bill" class="form-check-input" style= "color:#764409;" id="id_bill" data-bs-toggle="collapse" data-bs-target="#collapseExampleBill" aria-controls="collapseExampleBill" aria-expanded="false"> 
+                    <label style="color:#764409;" for="id_bill">{% trans "Fatura istiyorum" %}</label>
+                </div>
+                <div class="collapse" id="collapseExampleBill"><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="exampleRadioBill" id="bireysel" value="bireysel">
+                        <label style= "color:#764409;" for="bireysel" ><b>{% trans "Bireysel Fatura" %}</b></label>
+                    </div>&emsp;
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="exampleRadioBill" id="kurumsal" value="kurumsal" >
+                        <label class="form-check-label" style= "color:#764409;"  for="kurumsal" name="kurumsal" id="kurumsal"><b>{% trans "Kurumsal Fatura" %}</b></label>
+                    </div>
+                    
+                    <div id="bireyselCollapse" class="collapse">
+                        <div class="row">
+                            <div class="col-md-3">
+                                {{bireysel_fatura_form.name_surname}}
+                            </div>
+                            <div class="col-md-3">
+                                {{bireysel_fatura_form.tc_no}}
+                            </div>
+                        </div>
+                            <div class="col-md-6">
+                                <b><label for="name_surname" style="color:#764409; font-size: 10px;">{% trans "Ad Soyad" %}:</b> </label><br>
+                                <input type="text" name="name_surname" id="name_surname" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <b><label for="tc_no" style = "color:#764409; font-size: 10px;">{% trans "TC Kimlik No" %}:</b> </label><br>
+                                <input type="text" name="tc_no" id="tc_no" class="form-control">
+                            </div>
+                    </div>
+                    
+                    <!-- Kurumsal Fatura İçeriği -->
+                    <div id="kurumsalCollapse" class="collapse">
+                            <div class="col-md-6">
+                                <b><label for="firma_name" style = "color:#764409; font-size: 10px;">{% trans "Firma Ünvanı" %}:</b> </label><br>
+                                <input name="firma_name" id="firma_name" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <b><label for="vergi_no" style = "color:#764409; font-size: 10px;">{% trans "Vergi No" %}:</b> </label><br>
+                                <input name="vergi_no" id="vergi_no" class="form-control" >
+                            </div>
+                        &emsp;<div class="col">
+                            <b><label for="bill_adress" style = "color:#764409; font-size: 10px;">{% trans "Fatura Adresi" %}:</b> </label><br>
+                            <textarea style="resize: none" id="bill_adress"  name="bill_adress" class="form-control" ></textarea>
+                            </div>
+                    
+                    </div>
+                </div>
+                <script src="{% static 'js/bill.js' %}"></script>
+            </div><br>
+
+            
+
+            <!--Yeni fatura kısmı deneme-->
+            <!--
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input type="checkbox" name="bireysel_bill" class="form-check-input" style= "color:#764409;" id="bireysel_bill" data-bs-toggle="collapse" data-bs-target="#collapseExampleBireysel" aria-controls="collapseExampleBireysel" aria-expanded="false"> 
+                        <label style="color:#764409;" for="bireysel_bill">{% trans "Bireysel fatura istiyorum" %}</label>
+                    </div>
+                </div>-->
+                <!--
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input type="checkbox" name="kurumsal_bill" class="form-check-input" style= "color:#764409;" id="kurumsal_bill" data-bs-toggle="collapse" data-bs-target="#collapseExampleKurumsal" aria-controls="collapseExampleKurumsal" aria-expanded="false"> 
+                        <label style="color:#764409;" for="kurumsal_bill">{% trans "Kurumsal fatura istiyorum" %}</label>
+                    </div>
+                </div>
+                -->
+                <!--
+            </div><br>
+            <div class="collapse" id="collapseExampleBireysel">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b><label for="name_surname" style="color:#764409; font-size: 10px;">{% trans "Ad Soyad" %}:</b> </label><br>
+                            {{bireysel_fatura_form.name_surname}}
+                        </div>
+                        <div class="col-md-3">
+                            <b><label for="tc_no" style = "color:#764409; font-size: 10px;">{% trans "TC Kimlik No" %}:</b> </label><br>
+                            {{bireysel_fatura_form.tc_no}}
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <!--
+            <div class="collapse" id="collapseExampleKurumsal">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b><label for="firma_name" style = "color:#764409; font-size: 10px;">{% trans "Firma Ünvanı" %}:</b> </label><br>
+                            {{kurumsal_fatura_form.firma_name}}
+                        </div>
+                        <div class="col-md-3">
+                            <b><label for="vergi_no" style = "color:#764409; font-size: 10px;">{% trans "Vergi No" %}:</b> </label><br>
+                            {{kurumsal_fatura_form.vergi_no}}
+                        </div>
+                        <div class="col">
+                            <b><label for="bill_adress" style = "color:#764409; font-size: 10px;">{% trans "Fatura Adresi" %}:</b> </label><br>
+                            {{kurumsal_fatura_form.bill_adress}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+
+                <!--
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="fatura" name="fatura_checkbox" id="flexCheckChecked" data-bs-toggle="collapse" data-bs-target="#collapseExamplebill" aria-controls="collapseExamplebill" aria-expanded="false" >
+                    <label class="form-check-label" style= "color:#764409;" for="flexCheckChecked" data-bs-toggle="collapse" data-bs-target="#collapseExamplebill" aria-controls="collapseExamplebill" aria-expanded="false">{% trans "Fatura istiyorum" %}</label>
+                    <div class="collapse" id="collapseExamplebill">
+                      <br>&emsp;
+                        <div class="card card-body">
+                            <h6 style="color:#764409;" >&emsp;{% trans "Fatura Bilgileri" %}</h6>
+                            <hr>
+                            <p style="color:#764409; font-size: 10px;">{% trans "Rezervasyon Bilgilendirme Maili" %}</p>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <option value="collapse1" >{% trans "Bireysel Fatura" %}</option>
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <br><div class="row">
+                                                <div class="col-md-6">
+                                                    <b><label for="name_surname" style = "color:#764409; font-size: 10px;">{% trans "Ad Soyad" %}:</b> </label><br>
+                                                    <input name="name_surname" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b><label for="tc_no" style = "color:#764409; font-size: 10px;">{% trans "TC Kimlik No" %}:</b> </label><br>
+                                                    <input name="tc_no" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        <option value="collapse2">{% trans "Kurumsal Fatura" %}</option>
+                                    </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <br><div class="row">
+                                            <div class="col-md-6">
+                                                <b><label for="firma_name" style = "color:#764409; font-size: 10px;">{% trans "Firma Ünvanı" %}:</b> </label><br>
+                                                <input name="firma_name" class="form-control">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b><label for="vergi_no" style = "color:#764409; font-size: 10px;">{% trans "Vergi No" %}:</b> </label><br>
+                                                <input name="vergi_no" class="form-control" >
+                                            </div>
+                                        </div>
+                                        &emsp;<div class="col">
+                                            <b><label for="bill_adress" style = "color:#764409; font-size: 10px;">{% trans "Fatura Adresi" %}:</b> </label><br>
+                                            <textarea style="resize: none"  name="bill_adress" class="form-control" ></textarea>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>          
+                </div><br><br>
+-->
+                <!-- Fatura Kısmı 
+                <div class="row">
+                    <div class="form-check">
+                        <input type="checkbox" name="id_bill" class="form-check-input" style= "color:#764409;" id="id_bill" data-bs-toggle="collapse" data-bs-target="#collapseExampleBill" aria-controls="collapseExampleBill" aria-expanded="false"> 
+                        <label style="color:#764409;" for="id_bill">{% trans "Fatura istiyorum" %}</label>
+                        <div class="collapse" id="collapseExampleBill"><br>
+                            <div class="card card-body">
+                                    <h6 style="color:#764409;" >&emsp;{% trans "Fatura Bilgileri" %}</h6>
+                                    <hr>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    <option name="bireysel" value="collapse1" >{% trans "Bireysel Fatura" %}</option>
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <br>
+                                                    <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <b><label for="name_surname" style = "color:#764409; font-size: 10px;">{% trans "Ad Soyad" %}:</b> </label><br>
+                                                            <input name="name_surname" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <b><label for="tc_no" style = "color:#764409; font-size: 10px;">{% trans "TC Kimlik No" %}:</b> </label><br>
+                                                            <input name="tc_no" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                <option value="collapse2">{% trans "Kurumsal Fatura" %}</option>
+                                            </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <br><div class="row">
+                                                    <div class="col-md-6">
+                                                        <b><label for="firma_name" style = "color:#764409; font-size: 10px;">{% trans "Firma Ünvanı" %}:</b> </label><br>
+                                                        <input name="firma_name" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <b><label for="vergi_no" style = "color:#764409; font-size: 10px;">{% trans "Vergi No" %}:</b> </label><br>
+                                                        <input name="vergi_no" class="form-control" >
+                                                    </div>
+                                                </div>
+                                                &emsp;<div class="col">
+                                                    <b><label for="bill_adress" style = "color:#764409; font-size: 10px;">{% trans "Fatura Adresi" %}:</b> </label><br>
+                                                    <textarea style="resize: none"  name="bill_adress" class="form-control" ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                   <!-- Toplam Fiyat Kısmı -->
+                   &emsp;
+                   <h6 style ="color: #8b4513;">&emsp;{% trans "Fiyat Dökümü" %}</h6>
+                   <hr color="#764409" size="4">
+                   <div class="border h-80 p-3 border-dark p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;">
+                       <div class="border h-20 p-2 border-dark p-2 mb-2 border-opacity-25 rounded-2">
+                           <div class="d-flex justify-content ">
+                               <div class="col-example" style="color:#764409;"><b> {% trans "Geliş Transfer" %}: </b></div>&emsp;
+                               <div class="col-example" style="color:#764409;" value="{{car.price}}" id="resultcars" >{{car.price}} {{car.currency}}</div>
+                           </div>
+                       </div>
+                       <div class="border h-20 p-2 border-dark p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;">
+                           <div class="d-flex justify-content ">
+                               <div class="col-example" style="color:#764409;"><b>{% trans "Ekstralar Toplam Tutar" %}: </b></div>&emsp;
+                               <div class="col-example" style="color:#764409;" value="0" id="resultextras" name="resultextras" >0 ₺</div>&ensp;
+                             <script src="{% static 'js/extrasplus.js' %}"></script>
+                           </div>
+                       </div>
+                       <div class="border h-20 p-2 border-dark p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;">
+                           <div class="d-flex justify-content-end ">
+                               <div class="col-example" style="color:#764409;"><b>{% trans "Toplam Tutar" %}: </b></div>&emsp;
+                               <div class="col-example" style="color:#764409;" id="resulttop"></div>&ensp;
+                           </div>
+                       </div>
+                   </div>&emsp;
+
+
+    <h6 style ="color: #8b4513;">&emsp;{% trans "Ödeme Bilgisi" %}</h6>
+    <hr color="#764409" size="4">
+    <div class="container">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="option1" value="option1" checked>
+            <label class="form-check-label" style= "color:#764409;" for="option1" name="Cash"><b>{% trans "Araçta Nakit" %}</b></label>
+        </div>&emsp;
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="option2" value="option2" >
+            <label class="form-check-label" style= "color:#764409;"  for="option2" name="EFT"><b>{% trans "EFT/Havale" %}</b></label>
+        </div>
+    </div>&emsp;
+    <div class="collapse show" id="collapseContent1" >
+        <div class="alert alert-light" style="background: #fcfcfc;">
+            <p style="color:#764409;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 20 20">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg> {% trans "Lütfen ödemenizi buluşma zamanında aracınızın şoförüne yapmayı unutmayınız." %}</p>
+        </div>
+    </div>
+    <div class="collapse" id="collapseContent2" >
+        <div class="card card-body" style="color:#764409;">
+                <p>{% trans "EFT/Havale ile ödeme yapmak için aşağıdaki IBAN numarasına sipariş tutarını, açıklama kısmına referans kodunu girerek gönderiniz." %}</p>
+                <p><b>{% trans "Deniz Bank TL: " %}</b>TR*************************<br><small>{% trans "TL HESABI" %}</small></p>
+                <p><b>{% trans "Deniz Bank USD: " %}</b>TR***************************<br><small>{% trans "USD - DOLAR HESABI" %}</small></p>
+                <p><b>{% trans "Deniz Bank EURO: "%}</b>TR***************************<br><small>{% trans "EURO HESABI" %}</small></p>
+                <div class="alert alert-light" role="alert"  style="background: #fcfcfc;">
+                    <h4 style="color:#764409;" class="alert-heading" >{% trans "Bilgilendirme" %}</h4>
+                    <hr>
+                    <p style="color:#764409;" class="mb-0">{% trans "Açıklama kısmına referans kodunu doğru giriniz, sipariş takibi yapabilmemiz açısından çok önemlidir." %}</p>
+                </div>
+        </div>
+    </div>
+    <script src="{% static 'js/payment_show.js' %}"></script>
+
+    <div class="d-flex justify-content-end ">
+        <button class="r_button" type="submit" style="background-color:#764409;border-color:#764409;color:white;font-size:14px;border-radius:2px;">Rezervasyonu Tamamla</button>
+    </div>
+</form>
+{% endblock  %}

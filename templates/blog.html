@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block r_query %}
+{% load i18n %}
+<style>
+    .carousel-inner{
+        clip-path: ellipse(100% 100% at 50% 0%);
+    }
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto; 
+    }
+    @media (max-width: 640px) {
+        .carousel-inner {
+            margin-top: 43px;
+        }
+    }
+</style>
+
+<div class="carousel-inner">
+    <div class="carousel-item active" >
+        <img src="../media/img_1_sorgu.jpg" class="img-fluid">
+        <div class="carousel-caption d-flex flex-column justify-content-center h-100 text-start"> 
+            <h5 style="font-size: 20px; color: #C19A6B;">
+                <span class="border border-secondary-subtle border-3 p-3 rounded" style="display: inline-block; backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.1); padding: 8px; border-radius: 8px;">
+                    {% trans "BLOG" %}
+                </span>
+            </h5>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class="d-img"> 
+    <img src="../media/img_1.jpg" class="img-fluid">
+</div>
+-->
+
+{% endblock%}
+
+{% block body %}
+
+{% if articles %}
+{% for article in articles  %}
+<div class="border border-tertiary p-4 mb-4 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+    <h5><a href="{% url 'blog_detail' article.id %}" style="color: #764409; text-decoration:none" >{{article.title}}</a></h5>
+    <small style="color: #828282;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 20 20">
+        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg> {{article.created_date}}</small>
+    <hr color="#764409" size="5"> 
+    <div class="row">
+        <div class="col-md-3">
+            <a href="{% url 'blog_detail' article.id %}" ><img class="img-fluid rounded" width="250" height="250" src="{{article.article_image.url}}" alt=""></a>
+        </div>
+        <div class="col-md-8">
+            <p>{{article.content|safe|truncatewords:30}}...</p>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endfor %}
+{% else %}
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+    <b><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 20 20">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+      </svg>&ensp;</b>
+    <div>
+       Bloğumuz üzerinde çalışmalar devam etmektedir.
+    </div>
+</div>
+{% endif %}
+{% endblock  %}

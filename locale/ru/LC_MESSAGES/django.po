@@ -1,0 +1,806 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-08 15:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\about.html:26
+msgid "BİZ KİMİZ?"
+msgstr "КТО МЫ?"
+
+#: .\templates\blog.html:26
+msgid "BLOG"
+msgstr "БЛОГ"
+
+#: .\templates\carcall.html:7 .\templates\carcall.html:47
+#: .\templates\index.html:99
+msgid "Transfer Ara"
+msgstr "Поиск трансфера"
+
+#: .\templates\carcall.html:21 .\templates\index.html:71
+msgid "Nereden"
+msgstr "Откуда"
+
+#: .\templates\carcall.html:27 .\templates\index.html:78
+msgid "Nereye"
+msgstr "Куда"
+
+#: .\templates\carcall.html:34 .\templates\index.html:85
+msgid "Kişi Sayısı"
+msgstr "Число людей"
+
+#: .\templates\carcall.html:35 .\templates\index.html:86
+msgid "Kişi"
+msgstr "Человек"
+
+#: .\templates\carcall.html:38 .\templates\index.html:89
+msgid "Yetişkin"
+msgstr "Взрослый"
+
+#: .\templates\carcall.html:40 .\templates\index.html:91
+msgid "Çocuk"
+msgstr "Ребенок"
+
+#: .\templates\carcall.html:83
+msgid " Kapasite: "
+msgstr " Емкость: "
+
+#: .\templates\carcall.html:90
+msgid "Bagaj: "
+msgstr "Багаж: "
+
+#: .\templates\carcall.html:96
+msgid "Toplam Tutar:"
+msgstr "Общая сумма:"
+
+#: .\templates\carcall.html:105
+msgid "Aracı Seç >"
+msgstr "Выберите Инструмент >"
+
+#: .\templates\carcall.html:117
+msgid "Kriterlere uygun araba bulunmamaktadır."
+msgstr "Нет автомобилей, соответствующих критериям."
+
+#: .\templates\deneme.html:12 .\templates\deneme.html:45
+#: .\templates\deneme.html:183 .\templates\deneme.html:237
+#: .\templates\deneme.html:290 .\templates\deneme.html:352
+#: .\templates\reservation.html:80 .\templates\reservation.html:146
+msgid "Ad Soyad"
+msgstr "Имя Фамилия"
+
+#: .\templates\deneme.html:16 .\templates\reservation.html:84
+#: .\templates\reservation_query.html:58
+msgid "E-Posta"
+msgstr "Электронная почта"
+
+#: .\templates\deneme.html:20 .\templates\reservation.html:88
+msgid "Telefon Numarası"
+msgstr "Номер телефона"
+
+#: .\templates\deneme.html:24 .\templates\reservation.html:92
+msgid "Geliş Transfer Bilgileri"
+msgstr "Информация о трансфере по прибытии"
+
+#: .\templates\deneme.html:28 .\templates\reservation.html:96
+msgid "Transfer Tarihi"
+msgstr "Дата передачи"
+
+#: .\templates\deneme.html:32 .\templates\reservation.html:100
+msgid "Uçak İniş Saati"
+msgstr "Время посадки самолета"
+
+#: .\templates\deneme.html:36 .\templates\reservation.html:104
+msgid "Uçuş No"
+msgstr "Номер рейса"
+
+#: .\templates\deneme.html:40 .\templates\reservation.html:140
+msgid "Yolcu Bilgileri"
+msgstr "Информация для пассажиров"
+
+#: .\templates\deneme.html:44 .\templates\reservation.html:145
+msgid "Yolcu"
+msgstr "Путешественник"
+
+#: .\templates\deneme.html:51 .\templates\deneme.html:54
+msgid "Özel Karşılama istiyorum"
+msgstr "Я хочу особый прием"
+
+#: .\templates\deneme.html:58 .\templates\reservation.html:160
+msgid "Karşılama Mesajı"
+msgstr "Приветственное сообщение"
+
+#: .\templates\deneme.html:62 .\templates\reservation.html:164
+msgid "Transferle ilgili özel isteğiniz"
+msgstr "Ваш особый запрос относительно трансфера"
+
+#: .\templates\deneme.html:69 .\templates\reservation.html:173
+msgid "Ekstralar"
+msgstr "Дополнительно"
+
+#: .\templates\deneme.html:85 .\templates\deneme.html:100
+#: .\templates\deneme.html:115 .\templates\deneme.html:130
+#: .\templates\deneme.html:145 .\templates\reservation.html:189
+#: .\templates\reservation.html:204 .\templates\reservation.html:219
+#: .\templates\reservation.html:234 .\templates\reservation.html:249
+msgid "0 Adet"
+msgstr "0 шт."
+
+#: .\templates\deneme.html:86 .\templates\deneme.html:101
+#: .\templates\deneme.html:116 .\templates\deneme.html:131
+#: .\templates\deneme.html:146 .\templates\reservation.html:190
+#: .\templates\reservation.html:205 .\templates\reservation.html:220
+#: .\templates\reservation.html:235 .\templates\reservation.html:250
+msgid "1 Adet"
+msgstr "1 шт."
+
+#: .\templates\deneme.html:87 .\templates\deneme.html:102
+#: .\templates\deneme.html:117 .\templates\deneme.html:132
+#: .\templates\deneme.html:147 .\templates\reservation.html:191
+#: .\templates\reservation.html:206 .\templates\reservation.html:221
+#: .\templates\reservation.html:236 .\templates\reservation.html:251
+msgid "2 Adet"
+msgstr "2 шт."
+
+#: .\templates\deneme.html:88 .\templates\deneme.html:103
+#: .\templates\deneme.html:118 .\templates\deneme.html:133
+#: .\templates\deneme.html:148 .\templates\reservation.html:192
+#: .\templates\reservation.html:207 .\templates\reservation.html:222
+#: .\templates\reservation.html:237 .\templates\reservation.html:252
+msgid "3 Adet"
+msgstr "3 шт."
+
+#: .\templates\deneme.html:89 .\templates\deneme.html:104
+#: .\templates\deneme.html:119 .\templates\deneme.html:134
+#: .\templates\reservation.html:193 .\templates\reservation.html:208
+#: .\templates\reservation.html:223 .\templates\reservation.html:238
+msgid "4 Adet"
+msgstr "4 шт."
+
+#: .\templates\deneme.html:90 .\templates\deneme.html:105
+#: .\templates\deneme.html:120 .\templates\deneme.html:135
+#: .\templates\reservation.html:194 .\templates\reservation.html:209
+#: .\templates\reservation.html:224 .\templates\reservation.html:239
+msgid "5 Adet"
+msgstr "5 шт."
+
+#: .\templates\deneme.html:91 .\templates\deneme.html:106
+#: .\templates\deneme.html:121 .\templates\deneme.html:136
+#: .\templates\reservation.html:195 .\templates\reservation.html:210
+#: .\templates\reservation.html:225 .\templates\reservation.html:240
+msgid "6 Adet"
+msgstr "6 шт."
+
+#: .\templates\deneme.html:92 .\templates\deneme.html:107
+#: .\templates\deneme.html:122 .\templates\deneme.html:137
+#: .\templates\reservation.html:196 .\templates\reservation.html:211
+#: .\templates\reservation.html:226 .\templates\reservation.html:241
+msgid "7 Adet"
+msgstr "7 шт."
+
+#: .\templates\deneme.html:93 .\templates\deneme.html:108
+#: .\templates\deneme.html:123 .\templates\deneme.html:138
+#: .\templates\reservation.html:197 .\templates\reservation.html:212
+#: .\templates\reservation.html:227 .\templates\reservation.html:242
+msgid "8 Adet"
+msgstr "8 шт."
+
+#: .\templates\deneme.html:94 .\templates\deneme.html:109
+#: .\templates\deneme.html:124 .\templates\deneme.html:139
+#: .\templates\reservation.html:198 .\templates\reservation.html:213
+#: .\templates\reservation.html:228 .\templates\reservation.html:243
+msgid "9 Adet"
+msgstr "9 шт."
+
+#: .\templates\deneme.html:95 .\templates\deneme.html:110
+#: .\templates\deneme.html:125 .\templates\deneme.html:140
+#: .\templates\reservation.html:199 .\templates\reservation.html:214
+#: .\templates\reservation.html:229 .\templates\reservation.html:244
+msgid "10 Adet"
+msgstr "10 шт."
+
+#: .\templates\deneme.html:161 .\templates\deneme.html:272
+#: .\templates\deneme.html:334 .\templates\reservation.html:269
+msgid "Fatura istiyorum"
+msgstr "мне нужен счет"
+
+#: .\templates\deneme.html:166 .\templates\deneme.html:283
+#: .\templates\deneme.html:343
+msgid "Bireysel Fatura"
+msgstr "Индивидуальный счет"
+
+#: .\templates\deneme.html:170 .\templates\deneme.html:304
+#: .\templates\deneme.html:367
+msgid "Kurumsal Fatura"
+msgstr "Корпоративный счет"
+
+#: .\templates\deneme.html:187 .\templates\deneme.html:241
+#: .\templates\deneme.html:294 .\templates\deneme.html:356
+msgid "TC Kimlik No"
+msgstr "Идентификационный номер"
+
+#: .\templates\deneme.html:195 .\templates\deneme.html:253
+#: .\templates\deneme.html:311 .\templates\deneme.html:374
+msgid "Firma Ünvanı"
+msgstr "Название компании"
+
+#: .\templates\deneme.html:199 .\templates\deneme.html:257
+#: .\templates\deneme.html:315 .\templates\deneme.html:378
+#: .\templates\reservation.html:326
+msgid "Vergi No"
+msgstr "Налоговый номер"
+
+#: .\templates\deneme.html:203 .\templates\deneme.html:261
+#: .\templates\deneme.html:320 .\templates\deneme.html:383
+#: .\templates\reservation.html:299 .\templates\reservation.html:334
+msgid "Fatura Adresi"
+msgstr "Адрес для выставления счета"
+
+#: .\templates\deneme.html:220
+msgid "Bireysel fatura istiyorum"
+msgstr "Я хочу индивидуальный счет"
+
+#: .\templates\deneme.html:227
+msgid "Kurumsal fatura istiyorum"
+msgstr "Я хочу корпоративный счет"
+
+#: .\templates\deneme.html:276 .\templates\deneme.html:337
+msgid "Fatura Bilgileri"
+msgstr "Платежная информация"
+
+#: .\templates\deneme.html:278
+msgid "Rezervasyon Bilgilendirme Maili"
+msgstr "Электронная почта с информацией о бронировании"
+
+#: .\templates\deneme.html:396 .\templates\reservation.html:353
+msgid "Fiyat Dökümü"
+msgstr "Распределение цен"
+
+#: .\templates\deneme.html:401 .\templates\reservation.html:358
+msgid "Geliş Transfer"
+msgstr "Трансфер по прибытии"
+
+#: .\templates\deneme.html:407 .\templates\reservation.html:364
+msgid "Ekstralar Toplam Tutar"
+msgstr "Экстра общая сумма"
+
+#: .\templates\deneme.html:414 .\templates\reservation.html:370
+msgid "Toplam Tutar"
+msgstr "Общая сумма"
+
+#: .\templates\deneme.html:421 .\templates\reservation.html:381
+msgid "Ödeme Bilgisi"
+msgstr "Платежная информация"
+
+#: .\templates\deneme.html:426 .\templates\reservation.html:386
+#: .\templates\reservation_detail.html:294
+msgid "Araçta Nakit"
+msgstr "Наличные в автомобиле"
+
+#: .\templates\deneme.html:430 .\templates\reservation.html:390
+#: .\templates\reservation_detail.html:296
+msgid "EFT/Havale"
+msgstr "EFT/денежный перевод"
+
+#: .\templates\deneme.html:437 .\templates\reservation.html:397
+msgid ""
+"Lütfen ödemenizi buluşma zamanında aracınızın şoförüne yapmayı unutmayınız."
+msgstr ""
+"Пожалуйста, не забудьте произвести оплату водителю вашего автомобиля по "
+"адресу время встречи"
+
+#: .\templates\deneme.html:442
+msgid ""
+"EFT/Havale ile ödeme yapmak için aşağıdaki IBAN numarasına sipariş tutarını, "
+"açıklama kısmına referans kodunu girerek gönderiniz."
+msgstr ""
+"Для оплаты EFT/денежным переводом отправьте сумму заказа на номер IBAN, "
+"указанный ниже путем ввода ссылочного кода в разделе описания"
+
+#: .\templates\deneme.html:443 .\templates\reservation.html:403
+msgid "Deniz Bank TL: "
+msgstr "Deniz Bank TL: "
+
+#: .\templates\deneme.html:443 .\templates\reservation.html:403
+msgid "TL HESABI"
+msgstr "TL АККАУНТ"
+
+#: .\templates\deneme.html:444 .\templates\reservation.html:404
+msgid "Deniz Bank USD: "
+msgstr "Deniz Bank USD: "
+
+#: .\templates\deneme.html:444 .\templates\reservation.html:404
+msgid "USD - DOLAR HESABI"
+msgstr "USD - DOLAR АККАУНТ"
+
+#: .\templates\deneme.html:445 .\templates\reservation.html:405
+msgid "Deniz Bank EURO: "
+msgstr "Deniz Bank EURO: "
+
+#: .\templates\deneme.html:445 .\templates\reservation.html:405
+msgid "EURO HESABI"
+msgstr "EURO АККАУНТ"
+
+#: .\templates\deneme.html:447 .\templates\reservation.html:407
+msgid "Bilgilendirme"
+msgstr "Довести до сведения"
+
+#: .\templates\deneme.html:449
+msgid ""
+"Açıklama kısmına referans kodunu doğru giriniz, sipariş takibi yapabilmemiz "
+"açısından çok önemlidir."
+msgstr ""
+"Введите правильный ссылочный код в разделе описания, чтобы мы могли "
+"отслеживать ваш заказ Это очень важно с точки зрения"
+
+#: .\templates\gallery.html:26 .\templates\index.html:339
+msgid "GALERİ"
+msgstr "ГАЛЕРЕЯ"
+
+#: .\templates\includes\navbar.html:35
+msgid "Biz Kimiz?"
+msgstr "Кто мы?"
+
+#: .\templates\includes\navbar.html:42
+msgid "Hizmetlerimiz"
+msgstr "Наши сервисы"
+
+#: .\templates\includes\navbar.html:49
+msgid "Blog"
+msgstr "блог"
+
+#: .\templates\includes\navbar.html:57
+msgid "Galeri"
+msgstr "Галерея"
+
+#: .\templates\includes\navbar.html:65
+msgid "Rezervasyon Sorgulama"
+msgstr "Запрос на бронирование"
+
+#: .\templates\index.html:60
+msgid "XTransfer Havalimanı Otel Transfer"
+msgstr "XTransfer Трансфер из аэропорта в отель"
+
+#: .\templates\index.html:179
+msgid "TRANSFER REZERVASYONU YAPMAK ÇOK KOLAY"
+msgstr "ЗАКАЗАТЬ ТРАНСФЕР ОЧЕНЬ ЛЕГКО"
+
+#: .\templates\index.html:215
+msgid "TRANSFER TÜRLERİ VE ARAÇLARIMIZ"
+msgstr "ТИПЫ ТРАНСФЕРА И НАШИ ТРАНСПОРТНЫЕ СРЕДСТВА"
+
+#: .\templates\index.html:244
+msgid "Özel Sürücülü Vip Transfer"
+msgstr "VIP-трансфер с частным водителем"
+
+#: .\templates\index.html:246
+msgid "Şoförlü Özel Kiralama"
+msgstr "Частная аренда с водителем"
+
+#: .\templates\index.html:247
+msgid "Size Özel Karşılama Hizmeti"
+msgstr "Индивидуальное приветственное обслуживание для вас"
+
+#: .\templates\index.html:248
+msgid "Size Özel Araç"
+msgstr "Специальный инструмент для вас"
+
+#: .\templates\index.html:259
+msgid "Paylaşımlı Transfer"
+msgstr "Общий трансфер"
+
+#: .\templates\index.html:261
+msgid "13 Kişilik Minibüsler"
+msgstr "Микроавтобусы на 13 человек"
+
+#: .\templates\index.html:262
+msgid "Paylaşımlı Yolculuk"
+msgstr "Совместное путешествие"
+
+#: .\templates\index.html:263
+msgid "Önceden Belirlenmiş Buluşma Noktası"
+msgstr "Заранее назначенное место встречи"
+
+#: .\templates\index.html:264
+msgid "Paylaşımlı Transfer ve Benzeri"
+msgstr "Общий перевод и так далее"
+
+#: .\templates\index.html:289 .\templates\index.html:385
+msgid "POPÜLER YERLER"
+msgstr "ПОПУЛЯРНЫЕ МЕСТА"
+
+#: .\templates\index.html:300
+msgid "Antalya Transfer"
+msgstr "Трансфер из Анталии"
+
+#: .\templates\index.html:301 .\templates\index.html:314
+#: .\templates\index.html:327
+msgid "başlayan fiyatlarla"
+msgstr "цены от"
+
+#: .\templates\index.html:313
+msgid "Alanya Transfer"
+msgstr "Трансфер из Алании"
+
+#: .\templates\index.html:326
+msgid "Side Transfer"
+msgstr "Боковой перенос"
+
+#: .\templates\index.html:367
+msgid "Tüm Fotoğraflar"
+msgstr "Все фотографии"
+
+#: .\templates\index.html:373
+msgid "YORUMLAR"
+msgstr "КОММЕНТАРИИ"
+
+#: .\templates\layout.html:55
+msgid "Tüm Telif Hakları Saklıdır"
+msgstr "Все авторские права защищены"
+
+#: .\templates\reservation.html:40
+msgid "Rezervasyon Özeti"
+msgstr "Резюме бронирования"
+
+#: .\templates\reservation.html:45 .\templates\reservation_detail.html:53
+msgid " Araç Tipi: "
+msgstr " Тип транспортного средства: "
+
+#: .\templates\reservation.html:50 .\templates\reservation_detail.html:59
+msgid " Çıkış Noktası: "
+msgstr " Точка выхода: "
+
+#: .\templates\reservation.html:55 .\templates\reservation_detail.html:65
+msgid " Varış Noktası: "
+msgstr " Пункт назначения: "
+
+#: .\templates\reservation.html:61
+msgid " Toplam Kişi: "
+msgstr " Всего человек: "
+
+#: .\templates\reservation.html:61
+msgid " Yetişkin "
+msgstr " Взрослый "
+
+#: .\templates\reservation.html:61
+msgid " Çocuk"
+msgstr " Ребенок "
+
+#: .\templates\reservation.html:66 .\templates\reservation_detail.html:70
+msgid " Geliş Transfer: "
+msgstr " Прибытие Трансфер: "
+
+#: .\templates\reservation.html:73 .\templates\reservation_detail.html:76
+msgid "Rezervasyon Bilgileri"
+msgstr "Информация о бронировании"
+
+#: .\templates\reservation.html:108
+msgid "Pasaport No"
+msgstr "Номер паспорта"
+
+#: .\templates\reservation.html:117
+msgid "Dönüş Transferi Ekleme"
+msgstr "Добавление возвратной передачи"
+
+#: .\templates\reservation.html:122
+msgid "Dönüş Tarihi"
+msgstr "Дата возвращения"
+
+#: .\templates\reservation.html:126
+msgid "Dönüş Saati"
+msgstr "Время возврата"
+
+#: .\templates\reservation.html:130
+msgid "Dönüş Uçuş No"
+msgstr "Обратный рейс нет"
+
+#: .\templates\reservation.html:156
+msgid "Özel karşılama istiyorum"
+msgstr "Я хочу особого приема"
+
+#: .\templates\reservation.html:278
+msgid "Fatura İstiyorum"
+msgstr "Я хочу счет-фактуру"
+
+#: .\templates\reservation.html:295
+msgid "Ad-Soyad"
+msgstr "Имя-фамилия"
+
+#: .\templates\reservation.html:322
+msgid "Firma Adı"
+msgstr "Название компании"
+
+#: .\templates\reservation.html:330
+msgid "Vergi Dairesi"
+msgstr "Налоговая служба"
+
+#: .\templates\reservation.html:402
+msgid "EFT/Havale ile ödeme yapmak için aşağıdaki IBAN numarasına sipariş tutarını, açıklama kısmına ad-soyad-rezervasyon tarihi girerek gönderiniz."
+msgstr "Чтобы оплатить EFT/денежным переводом, отправьте сумму заказа на номер IBAN ниже, указав имя, фамилию и дату бронирования в разделе описания."
+
+#: .\templates\reservation.html:409
+msgid "Açıklama kısmına ad-soyad-rezervasyon tarihini doğru giriniz, sipariş takibi yapabilmemiz açısından çok önemlidir."
+msgstr "Правильно введите имя, фамилию и дату бронирования в разделе Описания, это очень важно для отслеживания заказов."
+
+#: .\templates\reservation.html:417
+msgid "Rezervasyonu Tamamla"
+msgstr "Завершить бронирование"
+
+#: .\templates\reservation_detail.html:5
+msgid "REZERVASYON DETAYI"
+msgstr "ДЕТАЛИ БРОНИРОВАНИЯ"
+
+#: .\templates\reservation_detail.html:11
+msgid "Rezervasyon İsteğiniz Tarafımıza İletilmiştir."
+msgstr "Ваш запрос на бронирование был передан нам."
+
+#: .\templates\reservation_detail.html:17
+msgid "En Kısa Zamanda Mailinize Dönüş Sağlanacaktır."
+msgstr "Мы вернем вашу почту как можно скорее."
+
+#: .\templates\reservation_detail.html:27
+msgid "Rezervasyon İsteğiniz Onaylanmıştır."
+msgstr "Ваш запрос на бронирование подтвержден."
+
+#: .\templates\reservation_detail.html:37
+msgid "Rezervasyon İsteğiniz Ret Edilmiştir."
+msgstr "Ваш запрос на бронирование был отклонен."
+
+#: .\templates\reservation_detail.html:47
+msgid "Rezervasyon Araç Bilgileri"
+msgstr "Информация о бронировании автомобиля"
+
+#: .\templates\reservation_detail.html:84
+msgid " Rezervasyon Numarası: "
+msgstr " Номер бронирования: "
+
+#: .\templates\reservation_detail.html:91
+msgid " Rezervasyon Durumu: "
+msgstr " Статус бронирования: "
+
+#: .\templates\reservation_detail.html:93
+msgid "İşlemde"
+msgstr "В процессе"
+
+#: .\templates\reservation_detail.html:95
+msgid "Onaylandı"
+msgstr "Подтверждено"
+
+#: .\templates\reservation_detail.html:97
+msgid "Ret Edilmiştir"
+msgstr "Был отклонен"
+
+#: .\templates\reservation_detail.html:108
+msgid " Ad Soyad: "
+msgstr " Имя и фамилия: "
+
+#: .\templates\reservation_detail.html:115
+msgid " Telefon Numarası: "
+msgstr " Номер телефона: "
+
+#: .\templates\reservation_detail.html:123
+msgid " Email: "
+msgstr " Электронная почта: "
+
+#: .\templates\reservation_detail.html:134
+msgid " Transfer Tarihi: "
+msgstr " Дата передачи: "
+
+#: .\templates\reservation_detail.html:143
+msgid " Uçak İniş Zamanı: "
+msgstr " Время посадки самолета: "
+
+#: .\templates\reservation_detail.html:150
+msgid " Uçuş Numarası: "
+msgstr " Номер рейса: "
+
+#: .\templates\reservation_detail.html:160
+msgid " Yolcular: "
+msgstr " Пассажиры: "
+
+#: .\templates\reservation_detail.html:171
+msgid " Fatura İsteği: "
+msgstr " Запрос счета-фактуры: "
+
+#: .\templates\reservation_detail.html:173
+#: .\templates\reservation_detail.html:187
+msgid "İstek oluşturulmamış"
+msgstr "Запрос не создан"
+
+#: .\templates\reservation_detail.html:185
+msgid " Fatura Detayı: "
+msgstr " Деталь счета-фактуры: "
+
+#: .\templates\reservation_detail.html:202
+msgid " Karşılama Mesajı: "
+msgstr " Приветственное сообщение: "
+
+#: .\templates\reservation_detail.html:204
+msgid "Mesaj Girilmemiş"
+msgstr "Сообщение не введено"
+
+#: .\templates\reservation_detail.html:216
+msgid " Transferle İlgili Özel İstek: "
+msgstr " Специальный запрос о трансфере: "
+
+#: .\templates\reservation_detail.html:218
+msgid "Özel İstek Girilmemiş"
+msgstr "Специальный запрос не введен"
+
+#: .\templates\reservation_detail.html:233
+msgid " Ekstralar: "
+msgstr " Дополнительные услуги: "
+
+#: .\templates\reservation_detail.html:235
+msgid "İstek Bulunmamaktadır."
+msgstr "Запросов нет."
+
+#: .\templates\reservation_detail.html:251
+msgid " Dönüş Tarihi: "
+msgstr " Дата возвращения: "
+
+#: .\templates\reservation_detail.html:262
+msgid " Dönüş Saati: "
+msgstr " Время возврата: "
+
+#: .\templates\reservation_detail.html:271
+msgid " Dönüş Uçuş Numarası: "
+msgstr " Номер обратного рейса: "
+
+#: .\templates\reservation_detail.html:284
+msgid " Toplam Tutar: "
+msgstr " Общая сумма: "
+
+#: .\templates\reservation_detail.html:292
+msgid " Ödeme Yöntemi: "
+msgstr " Способ оплаты: "
+
+#: .\templates\reservation_query.html:26
+msgid "REZERVASYON SORGULA"
+msgstr "ЗАПРОСИТЬ БРОНИРОВАНИЕ"
+
+#: .\templates\reservation_query.html:49 .\templates\reservation_query.html:62
+msgid "Rezervasyon Sorgula"
+msgstr "Запросить бронирование"
+
+#: .\templates\reservation_query.html:54
+msgid "Rezervasyon No"
+msgstr "Бронирование Нет"
+
+#: .\templates\services.html:26
+msgid "HİZMETLERİMİZ"
+msgstr "НАШИ УСЛУГИ"
+
+#: .\templates\shuttle_transfer.html:26
+msgid "Shuttle (Paylaşımlı) Transfer"
+msgstr "Трансфер (общий) трансфер"
+
+#: .\templates\vip_transfer_with_driver.html:26
+msgid "Özel Sürücülü VIP Transfer"
+msgstr "VIP-трансфер с личным водителем"
+
+#: .\transfer\models.py:36
+msgid "code"
+msgstr ""
+
+#: .\transfer\models.py:37
+msgid "name"
+msgstr ""
+
+#: .\transfer\models.py:38
+msgid "symbol"
+msgstr ""
+
+#: .\transfer\models.py:39
+msgid "factor"
+msgstr ""
+
+#: .\transfer\models.py:46
+msgid "Name"
+msgstr ""
+
+#: .\transfer\models.py:73 .\transfer\models.py:74 .\transfer\models.py:75
+#: .\transfer\models.py:76
+msgid "Lütfen listeden bir öge seçin."
+msgstr ""
+
+#: .\transfer\views.py:621
+msgid " Yetişkin Sayısı:"
+msgstr " Количество взрослых:"
+
+#: .\transfer\views.py:621
+msgid "Çocuk Sayısı:"
+msgstr "Количество детей:"
+
+#: .\transfer\views.py:626
+msgid "Lütfen 'Özel karşılama istiyorum' kısmını doldurunuz!"
+msgstr "Пожалуйста, заполните раздел 'Я хочу особого приема'!"
+
+#: .\transfer\views.py:634
+msgid "Lütfen 'Dönüş Transferi Ekleme' kısmını eksiksiz doldurunuz!"
+msgstr "Пожалуйста, заполните раздел 'Добавить возвратный перевод' полностью!"
+
+#: .\transfer\views.py:653 .\transfer\views.py:678
+msgid " adet"
+msgstr " штука"
+
+#: .\transfer\views.py:696 .\transfer\views.py:699
+msgid "Lütfen 'Bireysel Fatura' kısmını doldurunuz!"
+msgstr "Пожалуйста, заполните раздел 'Индивидуальный счет'!"
+
+#: .\transfer\views.py:702 .\transfer\views.py:705 .\transfer\views.py:708
+msgid "Lütfen 'Kurumsal Fatura' kısmını doldurunuz!"
+msgstr "Пожалуйста, заполните раздел 'Корпоративный счет'!"
+
+#: .\transfer\views.py:711
+msgid "Lütfen sadece bir fatura türü seçiniz!"
+msgstr "Пожалуйста, выберите только один тип счета-фактуры!"
+
+#: .\transfer\views.py:736
+msgid "Uçak saatinizi lütfen kontrol ediniz!"
+msgstr "Пожалуйста, проверьте время полета!"
+
+#: .\transfer\views.py:747
+msgid "Rezervasyon Kaydınız Başarıyla Oluşturuldu."
+msgstr "Ваша регистрация бронирования была успешно создана."
+
+#: .\transfer\views.py:776
+msgid "Girilen Bilgiler Yanlıştır!"
+msgstr "Введенная информация неверна!"
+
+#: .\transfer\views.py:777
+msgid "Lütfen Tekrar Deneyiniz!"
+msgstr "Пожалуйста, попробуйте еще раз!"
+
+#: .\transfer\views.py:906
+msgid "Lütfen fatura istiyorsanız 'Bireysel/Kurumsal' fatura türünü seçiniz!"
+msgstr ""
+"Пожалуйста, выберите 'Индивидуальный/корпоративный' тип счета, если вы "
+"хотите выставить счет!"
+
+#: .\transfer\views.py:914
+msgid ""
+"Lütfen Bireysel Fatura kısmındaki 'Ad Soyad-TC Kimlik No' kısımlarını "
+"doldurunuz!"
+msgstr ""
+"Пожалуйста, заполните 'Имя-фамилия-идентификационный номер' в разделе "
+"Индивидуальный счет-фактура!"
+
+#: .\transfer\views.py:929
+msgid ""
+"Lütfen Kurumsal Fatura kısmındaki 'Firma Ünvanı-Vergi No-Fatura Adresi' "
+"kısımlarını doldurunuz!"
+msgstr ""
+"Пожалуйста, заполните раздел 'Название компании - Налоговый номер-платежный "
+"адрес' в разделе 'Корпоративный счет-фактура'!"
+
+#: .\transferdeneme\settings.py:127
+msgid "English"
+msgstr ""
+
+#: .\transferdeneme\settings.py:128
+msgid "Turkish"
+msgstr ""
+
+#: .\transferdeneme\settings.py:129
+msgid "German"
+msgstr ""
+
+#: .\transferdeneme\settings.py:130
+msgid "Russian"
+msgstr ""

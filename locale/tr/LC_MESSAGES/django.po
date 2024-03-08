@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-25 13:30+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\carcall.html:33
+msgid " Kapasite: "
+msgstr ""
+
+#: .\templates\carcall.html:40
+msgid "Bagaj: "
+msgstr ""
+
+#: .\templates\carcall.html:46
+msgid "Toplam Tutar:"
+msgstr ""
+
+#: .\templates\carcall.html:55
+msgid "Aracı Seç >"
+msgstr ""
+
+#: .\templates\carcall.html:67
+msgid "Kriterlere uygun araba bulunmamaktadır."
+msgstr ""
+
+#: .\templates\includes\navbar.html:34
+msgid "Hakkımızda"
+msgstr ""
+
+#: .\templates\includes\navbar.html:42
+msgid "Blog"
+msgstr ""
+
+#: .\templates\includes\navbar.html:50
+msgid "Galeri"
+msgstr ""
+
+#: .\templates\includes\navbar.html:58
+msgid "Rezervasyon Sorgulama"
+msgstr ""
+
+#: .\templates\index.html:60
+msgid "XTransfer Havalimanı Otel Transfer"
+msgstr ""
+
+#: .\templates\index.html:71
+msgid "Nereden"
+msgstr ""
+
+#: .\templates\index.html:78
+msgid "Nereye"
+msgstr ""
+
+#: .\templates\index.html:85
+msgid "Kişi Sayısı"
+msgstr ""
+
+#: .\templates\index.html:86
+msgid "Kişi"
+msgstr ""
+
+#: .\templates\index.html:89
+msgid "Yetişkin"
+msgstr ""
+
+#: .\templates\index.html:91
+msgid "Çocuk"
+msgstr ""
+
+#: .\templates\index.html:98
+msgid "Transfer Ara"
+msgstr ""
+
+#: .\templates\reservation.html:8
+msgid "Rezervasyon Özeti"
+msgstr ""
+
+#: .\templates\reservation.html:13
+msgid " Araç Tipi: "
+msgstr ""
+
+#: .\templates\reservation.html:18
+msgid " Çıkış Noktası: "
+msgstr ""
+
+#: .\templates\reservation.html:23
+msgid " Varış Noktası: "
+msgstr ""
+
+#: .\templates\reservation.html:29
+msgid " Toplam Kişi: "
+msgstr ""
+
+#: .\templates\reservation.html:29
+msgid " Yetişkin "
+msgstr ""
+
+#: .\templates\reservation.html:29
+msgid " Çocuk"
+msgstr ""
+
+#: .\templates\reservation.html:34
+msgid " Geliş Transfer: "
+msgstr ""
+
+#: .\transfer\models.py:22
+msgid "Name"
+msgstr ""
+
+#: .\transfer\models.py:49 .\transfer\models.py:50 .\transfer\models.py:51
+#: .\transfer\models.py:52
+msgid "Lütfen listeden bir öge seçin."
+msgstr ""
+
+#: .\transferdeneme\settings.py:122
+msgid "English"
+msgstr ""
+
+#: .\transferdeneme\settings.py:123
+msgid "Turkish"
+msgstr ""
+
+#: .\transferdeneme\settings.py:124
+msgid "German"
+msgstr ""

@@ -1,0 +1,814 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-08 15:54+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\about.html:26
+msgid "BİZ KİMİZ?"
+msgstr "who are we?"
+
+#: .\templates\blog.html:26
+msgid "BLOG"
+msgstr "BLOG"
+
+#: .\templates\carcall.html:7 .\templates\carcall.html:47
+#: .\templates\index.html:99
+msgid "Transfer Ara"
+msgstr "Search Transfer"
+
+#: .\templates\carcall.html:21 .\templates\index.html:71
+msgid "Nereden"
+msgstr "From where"
+
+#: .\templates\carcall.html:27 .\templates\index.html:78
+msgid "Nereye"
+msgstr "To where"
+
+#: .\templates\carcall.html:34 .\templates\index.html:85
+msgid "Kişi Sayısı"
+msgstr "Number of people"
+
+#: .\templates\carcall.html:35 .\templates\index.html:86
+msgid "Kişi"
+msgstr "Person"
+
+#: .\templates\carcall.html:38 .\templates\index.html:89
+msgid "Yetişkin"
+msgstr "Adult"
+
+#: .\templates\carcall.html:40 .\templates\index.html:91
+msgid "Çocuk"
+msgstr "Kid"
+
+#: .\templates\carcall.html:83
+msgid " Kapasite: "
+msgstr " Capasity:"
+
+#: .\templates\carcall.html:90
+msgid "Bagaj: "
+msgstr "Luggage:"
+
+#: .\templates\carcall.html:96
+msgid "Toplam Tutar:"
+msgstr "Total Price:"
+
+#: .\templates\carcall.html:105
+msgid "Aracı Seç >"
+msgstr "Select Vehicle >"
+
+#: .\templates\carcall.html:117
+msgid "Kriterlere uygun araba bulunmamaktadır."
+msgstr "There are no cars that meet the criteria."
+
+#: .\templates\deneme.html:12 .\templates\deneme.html:45
+#: .\templates\deneme.html:183 .\templates\deneme.html:237
+#: .\templates\deneme.html:290 .\templates\deneme.html:352
+#: .\templates\reservation.html:80 .\templates\reservation.html:146
+msgid "Ad Soyad"
+msgstr "Name Surname"
+
+#: .\templates\deneme.html:16 .\templates\reservation.html:84
+#: .\templates\reservation_query.html:58
+msgid "E-Posta"
+msgstr "Email"
+
+#: .\templates\deneme.html:20 .\templates\reservation.html:88
+msgid "Telefon Numarası"
+msgstr "Client Phone"
+
+#: .\templates\deneme.html:24 .\templates\reservation.html:92
+msgid "Geliş Transfer Bilgileri"
+msgstr "Arrival Transfer Information"
+
+#: .\templates\deneme.html:28 .\templates\reservation.html:96
+msgid "Transfer Tarihi"
+msgstr "Transfer Date"
+
+#: .\templates\deneme.html:32 .\templates\reservation.html:100
+msgid "Uçak İniş Saati"
+msgstr "Airplane Landing Time"
+
+#: .\templates\deneme.html:36 .\templates\reservation.html:104
+msgid "Uçuş No"
+msgstr "Flight Number"
+
+#: .\templates\deneme.html:40 .\templates\reservation.html:140
+msgid "Yolcu Bilgileri"
+msgstr "Passenger Information"
+
+#: .\templates\deneme.html:44 .\templates\reservation.html:145
+msgid "Yolcu"
+msgstr "Passenger"
+
+#: .\templates\deneme.html:51 .\templates\deneme.html:54
+msgid "Özel Karşılama istiyorum"
+msgstr "I want welcome board"
+
+#: .\templates\deneme.html:58 .\templates\reservation.html:160
+msgid "Karşılama Mesajı"
+msgstr "Welcome Message"
+
+#: .\templates\deneme.html:62 .\templates\reservation.html:164
+msgid "Transferle ilgili özel isteğiniz"
+msgstr "Your special request regarding the transfer"
+
+#: .\templates\deneme.html:69 .\templates\reservation.html:173
+msgid "Ekstralar"
+msgstr "Extras"
+
+#: .\templates\deneme.html:85 .\templates\deneme.html:100
+#: .\templates\deneme.html:115 .\templates\deneme.html:130
+#: .\templates\deneme.html:145 .\templates\reservation.html:189
+#: .\templates\reservation.html:204 .\templates\reservation.html:219
+#: .\templates\reservation.html:234 .\templates\reservation.html:249
+msgid "0 Adet"
+msgstr "0 Piece"
+
+#: .\templates\deneme.html:86 .\templates\deneme.html:101
+#: .\templates\deneme.html:116 .\templates\deneme.html:131
+#: .\templates\deneme.html:146 .\templates\reservation.html:190
+#: .\templates\reservation.html:205 .\templates\reservation.html:220
+#: .\templates\reservation.html:235 .\templates\reservation.html:250
+msgid "1 Adet"
+msgstr "1 Piece"
+
+#: .\templates\deneme.html:87 .\templates\deneme.html:102
+#: .\templates\deneme.html:117 .\templates\deneme.html:132
+#: .\templates\deneme.html:147 .\templates\reservation.html:191
+#: .\templates\reservation.html:206 .\templates\reservation.html:221
+#: .\templates\reservation.html:236 .\templates\reservation.html:251
+msgid "2 Adet"
+msgstr "2 Pieces"
+
+#: .\templates\deneme.html:88 .\templates\deneme.html:103
+#: .\templates\deneme.html:118 .\templates\deneme.html:133
+#: .\templates\deneme.html:148 .\templates\reservation.html:192
+#: .\templates\reservation.html:207 .\templates\reservation.html:222
+#: .\templates\reservation.html:237 .\templates\reservation.html:252
+msgid "3 Adet"
+msgstr "3 Pieces"
+
+#: .\templates\deneme.html:89 .\templates\deneme.html:104
+#: .\templates\deneme.html:119 .\templates\deneme.html:134
+#: .\templates\reservation.html:193 .\templates\reservation.html:208
+#: .\templates\reservation.html:223 .\templates\reservation.html:238
+msgid "4 Adet"
+msgstr "4 Pieces"
+
+#: .\templates\deneme.html:90 .\templates\deneme.html:105
+#: .\templates\deneme.html:120 .\templates\deneme.html:135
+#: .\templates\reservation.html:194 .\templates\reservation.html:209
+#: .\templates\reservation.html:224 .\templates\reservation.html:239
+msgid "5 Adet"
+msgstr "5 Pieces"
+
+#: .\templates\deneme.html:91 .\templates\deneme.html:106
+#: .\templates\deneme.html:121 .\templates\deneme.html:136
+#: .\templates\reservation.html:195 .\templates\reservation.html:210
+#: .\templates\reservation.html:225 .\templates\reservation.html:240
+msgid "6 Adet"
+msgstr "6 Pieces"
+
+#: .\templates\deneme.html:92 .\templates\deneme.html:107
+#: .\templates\deneme.html:122 .\templates\deneme.html:137
+#: .\templates\reservation.html:196 .\templates\reservation.html:211
+#: .\templates\reservation.html:226 .\templates\reservation.html:241
+msgid "7 Adet"
+msgstr "7 Pieces"
+
+#: .\templates\deneme.html:93 .\templates\deneme.html:108
+#: .\templates\deneme.html:123 .\templates\deneme.html:138
+#: .\templates\reservation.html:197 .\templates\reservation.html:212
+#: .\templates\reservation.html:227 .\templates\reservation.html:242
+msgid "8 Adet"
+msgstr "8 Pieces"
+
+#: .\templates\deneme.html:94 .\templates\deneme.html:109
+#: .\templates\deneme.html:124 .\templates\deneme.html:139
+#: .\templates\reservation.html:198 .\templates\reservation.html:213
+#: .\templates\reservation.html:228 .\templates\reservation.html:243
+msgid "9 Adet"
+msgstr "9 Pieces"
+
+#: .\templates\deneme.html:95 .\templates\deneme.html:110
+#: .\templates\deneme.html:125 .\templates\deneme.html:140
+#: .\templates\reservation.html:199 .\templates\reservation.html:214
+#: .\templates\reservation.html:229 .\templates\reservation.html:244
+msgid "10 Adet"
+msgstr "10 Pieces"
+
+#: .\templates\deneme.html:161 .\templates\deneme.html:272
+#: .\templates\deneme.html:334 .\templates\reservation.html:269
+msgid "Fatura istiyorum"
+msgstr "I want an invoice"
+
+#: .\templates\deneme.html:166 .\templates\deneme.html:283
+#: .\templates\deneme.html:343
+msgid "Bireysel Fatura"
+msgstr "Individual Invoice"
+
+#: .\templates\deneme.html:170 .\templates\deneme.html:304
+#: .\templates\deneme.html:367
+msgid "Kurumsal Fatura"
+msgstr "Corporate Invoice"
+
+#: .\templates\deneme.html:187 .\templates\deneme.html:241
+#: .\templates\deneme.html:294 .\templates\deneme.html:356
+msgid "TC Kimlik No"
+msgstr "Identity No"
+
+#: .\templates\deneme.html:195 .\templates\deneme.html:253
+#: .\templates\deneme.html:311 .\templates\deneme.html:374
+msgid "Firma Ünvanı"
+msgstr "Company Name"
+
+#: .\templates\deneme.html:199 .\templates\deneme.html:257
+#: .\templates\deneme.html:315 .\templates\deneme.html:378
+#: .\templates\reservation.html:326
+msgid "Vergi No"
+msgstr "Tax Id"
+
+#: .\templates\deneme.html:203 .\templates\deneme.html:261
+#: .\templates\deneme.html:320 .\templates\deneme.html:383
+#: .\templates\reservation.html:299 .\templates\reservation.html:334
+msgid "Fatura Adresi"
+msgstr "Billing Address"
+
+#: .\templates\deneme.html:220
+msgid "Bireysel fatura istiyorum"
+msgstr "I want an individual bill"
+
+#: .\templates\deneme.html:227
+msgid "Kurumsal fatura istiyorum"
+msgstr "I want a corporate invoice"
+
+#: .\templates\deneme.html:276 .\templates\deneme.html:337
+msgid "Fatura Bilgileri"
+msgstr "Billing Information"
+
+#: .\templates\deneme.html:278
+msgid "Rezervasyon Bilgilendirme Maili"
+msgstr "Booking Information Mail"
+
+#: .\templates\deneme.html:396 .\templates\reservation.html:353
+msgid "Fiyat Dökümü"
+msgstr "Price Breakdown"
+
+#: .\templates\deneme.html:401 .\templates\reservation.html:358
+msgid "Geliş Transfer"
+msgstr "Arrival Transfer"
+
+#: .\templates\deneme.html:407 .\templates\reservation.html:364
+msgid "Ekstralar Toplam Tutar"
+msgstr "Extras Total Amount"
+
+#: .\templates\deneme.html:414 .\templates\reservation.html:370
+msgid "Toplam Tutar"
+msgstr "Total Price"
+
+#: .\templates\deneme.html:421 .\templates\reservation.html:381
+msgid "Ödeme Bilgisi"
+msgstr "Payment Info"
+
+#: .\templates\deneme.html:426 .\templates\reservation.html:386
+#: .\templates\reservation_detail.html:294
+msgid "Araçta Nakit"
+msgstr "Cash in Vehicle"
+
+#: .\templates\deneme.html:430 .\templates\reservation.html:390
+#: .\templates\reservation_detail.html:296
+msgid "EFT/Havale"
+msgstr "EFT/Remittance"
+
+#: .\templates\deneme.html:437 .\templates\reservation.html:397
+msgid ""
+"Lütfen ödemenizi buluşma zamanında aracınızın şoförüne yapmayı unutmayınız."
+msgstr ""
+"Please do not forget to make your payment to the driver of your vehicle at "
+"the meeting time."
+
+#: .\templates\deneme.html:442
+msgid ""
+"EFT/Havale ile ödeme yapmak için aşağıdaki IBAN numarasına sipariş tutarını, "
+"açıklama kısmına referans kodunu girerek gönderiniz."
+msgstr ""
+"To pay by EFT/Money Transfer, send the order amount to the IBAN number below "
+"by entering the reference code in the description section."
+
+#: .\templates\deneme.html:443 .\templates\reservation.html:403
+msgid "Deniz Bank TL: "
+msgstr "Deniz Bank TL: "
+
+#: .\templates\deneme.html:443 .\templates\reservation.html:403
+msgid "TL HESABI"
+msgstr "TL ACCOUNT"
+
+#: .\templates\deneme.html:444 .\templates\reservation.html:404
+msgid "Deniz Bank USD: "
+msgstr "Deniz Bank USD: "
+
+#: .\templates\deneme.html:444 .\templates\reservation.html:404
+msgid "USD - DOLAR HESABI"
+msgstr "USD - DOLAR ACCOUNT"
+
+#: .\templates\deneme.html:445 .\templates\reservation.html:405
+msgid "Deniz Bank EURO: "
+msgstr "Deniz Bank EURO: "
+
+#: .\templates\deneme.html:445 .\templates\reservation.html:405
+msgid "EURO HESABI"
+msgstr "EURO ACCOUNT"
+
+#: .\templates\deneme.html:447 .\templates\reservation.html:407
+msgid "Bilgilendirme"
+msgstr "Information"
+
+#: .\templates\deneme.html:449
+msgid ""
+"Açıklama kısmına referans kodunu doğru giriniz, sipariş takibi yapabilmemiz "
+"açısından çok önemlidir."
+msgstr ""
+"Please enter the reference code correctly in the description section, it is "
+"very important for us to track the order."
+
+#: .\templates\gallery.html:26 .\templates\index.html:339
+msgid "GALERİ"
+msgstr "GALLERY"
+
+#: .\templates\includes\navbar.html:35
+msgid "Biz Kimiz?"
+msgstr "who are we?"
+
+#: .\templates\includes\navbar.html:42
+msgid "Hizmetlerimiz"
+msgstr "Our Services"
+
+#: .\templates\includes\navbar.html:49
+msgid "Blog"
+msgstr "Blog"
+
+#: .\templates\includes\navbar.html:57
+msgid "Galeri"
+msgstr "Gallery"
+
+#: .\templates\includes\navbar.html:65
+msgid "Rezervasyon Sorgulama"
+msgstr "Reservation Inquiry"
+
+#: .\templates\index.html:60
+msgid "XTransfer Havalimanı Otel Transfer"
+msgstr "XTransfer Airport Hotel Transfer"
+
+#: .\templates\index.html:179
+msgid "TRANSFER REZERVASYONU YAPMAK ÇOK KOLAY"
+msgstr "IT IS VERY EASY TO BOOK A TRANSFER"
+
+#: .\templates\index.html:215
+msgid "TRANSFER TÜRLERİ VE ARAÇLARIMIZ"
+msgstr "TYPES OF TRANSFERS AND OUR VEHICLES"
+
+#: .\templates\index.html:244
+msgid "Özel Sürücülü Vip Transfer"
+msgstr "Vip Transfer with Private Driver"
+
+#: .\templates\index.html:246
+msgid "Şoförlü Özel Kiralama"
+msgstr "Private Rental with a Driver"
+
+#: .\templates\index.html:247
+msgid "Size Özel Karşılama Hizmeti"
+msgstr "Special Welcome Service for You"
+
+#: .\templates\index.html:248
+msgid "Size Özel Araç"
+msgstr "A Special Vehicle For You"
+
+#: .\templates\index.html:259
+msgid "Paylaşımlı Transfer"
+msgstr "Shared Transfer"
+
+#: .\templates\index.html:261
+msgid "13 Kişilik Minibüsler"
+msgstr "Minibuses for 13 People"
+
+#: .\templates\index.html:262
+msgid "Paylaşımlı Yolculuk"
+msgstr "Shared Journey"
+
+#: .\templates\index.html:263
+msgid "Önceden Belirlenmiş Buluşma Noktası"
+msgstr "The Predetermined Meeting Point"
+
+#: .\templates\index.html:264
+msgid "Paylaşımlı Transfer ve Benzeri"
+msgstr "Shared Transfer and So On"
+
+#: .\templates\index.html:289 .\templates\index.html:385
+msgid "POPÜLER YERLER"
+msgstr "POPULAR PLACES"
+
+#: .\templates\index.html:300
+msgid "Antalya Transfer"
+msgstr "Antalya Transfer"
+
+#: .\templates\index.html:301 .\templates\index.html:314
+#: .\templates\index.html:327
+msgid "başlayan fiyatlarla"
+msgstr "prices starting from"
+
+#: .\templates\index.html:313
+msgid "Alanya Transfer"
+msgstr "Alanya Transfer"
+
+#: .\templates\index.html:326
+msgid "Side Transfer"
+msgstr "Side Transfer"
+
+#: .\templates\index.html:367
+msgid "Tüm Fotoğraflar"
+msgstr "All Photos"
+
+#: .\templates\index.html:373
+msgid "YORUMLAR"
+msgstr "COMMENTS"
+
+#: .\templates\layout.html:55
+msgid "Tüm Telif Hakları Saklıdır"
+msgstr "All Copyrights Reserved"
+
+#: .\templates\reservation.html:40
+msgid "Rezervasyon Özeti"
+msgstr "Reservation Summary"
+
+#: .\templates\reservation.html:45 .\templates\reservation_detail.html:53
+msgid " Araç Tipi: "
+msgstr " Vehicle Type: "
+
+#: .\templates\reservation.html:50 .\templates\reservation_detail.html:59
+msgid " Çıkış Noktası: "
+msgstr " Starting Point: "
+
+#: .\templates\reservation.html:55 .\templates\reservation_detail.html:65
+msgid " Varış Noktası: "
+msgstr " Arrival Point: "
+
+#: .\templates\reservation.html:61
+msgid " Toplam Kişi: "
+msgstr " Total People: "
+
+#: .\templates\reservation.html:61
+msgid " Yetişkin "
+msgstr " Adult "
+
+#: .\templates\reservation.html:61
+msgid " Çocuk"
+msgstr " Kid"
+
+#: .\templates\reservation.html:66 .\templates\reservation_detail.html:70
+msgid " Geliş Transfer: "
+msgstr " Arrival Transfer: "
+
+#: .\templates\reservation.html:73 .\templates\reservation_detail.html:76
+msgid "Rezervasyon Bilgileri"
+msgstr "Reservation Information"
+
+#: .\templates\reservation.html:108
+msgid "Pasaport No"
+msgstr "Passport Number"
+
+#: .\templates\reservation.html:117
+msgid "Dönüş Transferi Ekleme"
+msgstr "Adding a Return Transfer"
+
+#: .\templates\reservation.html:122
+msgid "Dönüş Tarihi"
+msgstr "Return Date"
+
+#: .\templates\reservation.html:126
+msgid "Dönüş Saati"
+msgstr "Return Time"
+
+#: .\templates\reservation.html:130
+msgid "Dönüş Uçuş No"
+msgstr "Return Flight No"
+
+#: .\templates\reservation.html:156
+msgid "Özel karşılama istiyorum"
+msgstr "I want a special welcome"
+
+#: .\templates\reservation.html:278
+msgid "Fatura İstiyorum"
+msgstr "I want an invoice"
+
+#: .\templates\reservation.html:295
+msgid "Ad-Soyad"
+msgstr "Name Surname"
+
+#: .\templates\reservation.html:322
+msgid "Firma Adı"
+msgstr "Company Name"
+
+#: .\templates\reservation.html:330
+msgid "Vergi Dairesi"
+msgstr "Tax Authority"
+
+#: .\templates\reservation.html:402
+msgid "EFT/Havale ile ödeme yapmak için aşağıdaki IBAN numarasına sipariş tutarını, açıklama kısmına ad-soyad-rezervasyon tarihi girerek gönderiniz."
+msgstr "To pay by EFT/Wire Transfer, please send the order amount to the IBAN number below by entering the name-surname-booking date in the description section."
+
+#: .\templates\reservation.html:409
+msgid "Açıklama kısmına ad-soyad-rezervasyon tarihini doğru giriniz, sipariş takibi yapabilmemiz açısından çok önemlidir."
+msgstr "Please enter the name-surname-booking date correctly in the description section, it is very important for us to be able to track the order."
+
+#: .\templates\reservation.html:417
+msgid "Rezervasyonu Tamamla"
+msgstr "Complete The Reservation"
+
+#: .\templates\reservation_detail.html:5
+msgid "REZERVASYON DETAYI"
+msgstr "RESERVATION DETAILS"
+
+#: .\templates\reservation_detail.html:11
+msgid "Rezervasyon İsteğiniz Tarafımıza İletilmiştir."
+msgstr "Your reservation request has been sent to us."
+
+#: .\templates\reservation_detail.html:17
+msgid "En Kısa Zamanda Mailinize Dönüş Sağlanacaktır."
+msgstr "We will return to your email as soon as possible."
+
+#: .\templates\reservation_detail.html:27
+msgid "Rezervasyon İsteğiniz Onaylanmıştır."
+msgstr "Your reservation request has been approved."
+
+#: .\templates\reservation_detail.html:37
+msgid "Rezervasyon İsteğiniz Ret Edilmiştir."
+msgstr "Your reservation request has been rejected."
+
+#: .\templates\reservation_detail.html:47
+msgid "Rezervasyon Araç Bilgileri"
+msgstr "Reservation Vehicle Information"
+
+#: .\templates\reservation_detail.html:84
+msgid " Rezervasyon Numarası: "
+msgstr "Reservation No: "
+
+#: .\templates\reservation_detail.html:91
+msgid " Rezervasyon Durumu: "
+msgstr " Reservation Status: "
+
+#: .\templates\reservation_detail.html:93
+msgid "İşlemde"
+msgstr "In the process"
+
+#: .\templates\reservation_detail.html:95
+msgid "Onaylandı"
+msgstr "Approved"
+
+#: .\templates\reservation_detail.html:97
+msgid "Ret Edilmiştir"
+msgstr "Has Been Rejected"
+
+#: .\templates\reservation_detail.html:108
+msgid " Ad Soyad: "
+msgstr " Name Surname: "
+
+#: .\templates\reservation_detail.html:115
+msgid " Telefon Numarası: "
+msgstr " Client Phone: "
+
+#: .\templates\reservation_detail.html:123
+msgid " Email: "
+msgstr " Email: "
+
+#: .\templates\reservation_detail.html:134
+msgid " Transfer Tarihi: "
+msgstr " Transfer Date: "
+
+#: .\templates\reservation_detail.html:143
+msgid " Uçak İniş Zamanı: "
+msgstr " Airplane Landing Time: "
+
+#: .\templates\reservation_detail.html:150
+msgid " Uçuş Numarası: "
+msgstr " Flight Number: "
+
+#: .\templates\reservation_detail.html:160
+msgid " Yolcular: "
+msgstr " Passenger: "
+
+#: .\templates\reservation_detail.html:171
+msgid " Fatura İsteği: "
+msgstr " Invoice Request: "
+
+#: .\templates\reservation_detail.html:173
+#: .\templates\reservation_detail.html:187
+msgid "İstek oluşturulmamış"
+msgstr "No Request"
+
+#: .\templates\reservation_detail.html:185
+msgid " Fatura Detayı: "
+msgstr " Invoice Detail: "
+
+#: .\templates\reservation_detail.html:202
+msgid " Karşılama Mesajı: "
+msgstr " Welcome Message: "
+
+#: .\templates\reservation_detail.html:204
+msgid "Mesaj Girilmemiş"
+msgstr "No Message"
+
+#: .\templates\reservation_detail.html:216
+msgid " Transferle İlgili Özel İstek: "
+msgstr " Special Request for Transfer: "
+
+#: .\templates\reservation_detail.html:218
+msgid "Özel İstek Girilmemiş"
+msgstr "No Special Request"
+
+#: .\templates\reservation_detail.html:233
+msgid " Ekstralar: "
+msgstr " Extras: "
+
+#: .\templates\reservation_detail.html:235
+msgid "İstek Bulunmamaktadır."
+msgstr "No Request"
+
+#: .\templates\reservation_detail.html:251
+msgid " Dönüş Tarihi: "
+msgstr " Return Date: "
+
+#: .\templates\reservation_detail.html:262
+msgid " Dönüş Saati: "
+msgstr " Return Time: "
+
+#: .\templates\reservation_detail.html:271
+msgid " Dönüş Uçuş Numarası: "
+msgstr " Return Flight Number: "
+
+#: .\templates\reservation_detail.html:284
+msgid " Toplam Tutar: "
+msgstr " Total Price: "
+
+#: .\templates\reservation_detail.html:292
+msgid " Ödeme Yöntemi: "
+msgstr " Payment Info: "
+
+#: .\templates\reservation_query.html:26
+msgid "REZERVASYON SORGULA"
+msgstr "RESERVATION INQUIRY"
+
+#: .\templates\reservation_query.html:49 .\templates\reservation_query.html:62
+msgid "Rezervasyon Sorgula"
+msgstr "Resevation Inquiry"
+
+#: .\templates\reservation_query.html:54
+msgid "Rezervasyon No"
+msgstr "Reservation Inquiry"
+
+#: .\templates\services.html:26
+msgid "HİZMETLERİMİZ"
+msgstr "OUR SERVICES"
+
+#: .\templates\shuttle_transfer.html:26
+msgid "Shuttle (Paylaşımlı) Transfer"
+msgstr "Shuttle (Shared) Transfer"
+
+#: .\templates\vip_transfer_with_driver.html:26
+msgid "Özel Sürücülü VIP Transfer"
+msgstr "VIP Transfer with Private Driver"
+
+#: .\transfer\models.py:36
+msgid "code"
+msgstr ""
+
+#: .\transfer\models.py:37
+msgid "name"
+msgstr ""
+
+#: .\transfer\models.py:38
+msgid "symbol"
+msgstr ""
+
+#: .\transfer\models.py:39
+msgid "factor"
+msgstr ""
+
+#: .\transfer\models.py:46
+msgid "Name"
+msgstr ""
+
+#: .\transfer\models.py:73 .\transfer\models.py:74 .\transfer\models.py:75
+#: .\transfer\models.py:76
+msgid "Lütfen listeden bir öge seçin."
+msgstr "Please select an item from the list"
+
+#: .\transfer\views.py:621
+msgid " Yetişkin Sayısı:"
+msgstr " Number of Adults:"
+
+#: .\transfer\views.py:621
+msgid "Çocuk Sayısı:"
+msgstr "Number of Children:"
+
+#: .\transfer\views.py:626
+msgid "Lütfen 'Özel karşılama istiyorum' kısmını doldurunuz!"
+msgstr "Please fill in the 'I want a special welcome' section!"
+
+#: .\transfer\views.py:634
+msgid "Lütfen 'Dönüş Transferi Ekleme' kısmını eksiksiz doldurunuz!"
+msgstr "Please fill in the 'Adding Return Transfer' section completely!"
+
+#: .\transfer\views.py:653 .\transfer\views.py:678
+msgid " adet"
+msgstr " price"
+
+#: .\transfer\views.py:696 .\transfer\views.py:699
+msgid "Lütfen 'Bireysel Fatura' kısmını doldurunuz!"
+msgstr "Please fill in the 'Individual Invoice' section!"
+
+#: .\transfer\views.py:702 .\transfer\views.py:705 .\transfer\views.py:708
+msgid "Lütfen 'Kurumsal Fatura' kısmını doldurunuz!"
+msgstr "Please fill in the 'Corporate Invoice' section!"
+
+#: .\transfer\views.py:711
+msgid "Lütfen sadece bir fatura türü seçiniz!"
+msgstr "Please select only one type of invoice!"
+
+#: .\transfer\views.py:736
+msgid "Uçak saatinizi lütfen kontrol ediniz!"
+msgstr "Please check your flight time!"
+
+#: .\transfer\views.py:747
+msgid "Rezervasyon Kaydınız Başarıyla Oluşturuldu."
+msgstr "Your booking record has been successfully created."
+
+#: .\transfer\views.py:776
+msgid "Girilen Bilgiler Yanlıştır!"
+msgstr "The Information Entered Is Incorrect!"
+
+#: .\transfer\views.py:777
+msgid "Lütfen Tekrar Deneyiniz!"
+msgstr "Please Try Again!"
+
+#: .\transfer\views.py:906
+msgid "Lütfen fatura istiyorsanız 'Bireysel/Kurumsal' fatura türünü seçiniz!"
+msgstr ""
+"Please select the 'Individual/Corporate' invoice type if you want an invoice!"
+
+#: .\transfer\views.py:914
+msgid ""
+"Lütfen Bireysel Fatura kısmındaki 'Ad Soyad-TC Kimlik No' kısımlarını "
+"doldurunuz!"
+msgstr ""
+"Please fill in the 'Name Last Name-Identity Number' sections in the "
+"Individual Invoice section!"
+
+#: .\transfer\views.py:929
+msgid ""
+"Lütfen Kurumsal Fatura kısmındaki 'Firma Ünvanı-Vergi No-Fatura Adresi' "
+"kısımlarını doldurunuz!"
+msgstr ""
+"Please fill in the 'Company Name-Tax No-Billing Address' sections in the "
+"Corporate Invoice section!"
+
+#: .\transferdeneme\settings.py:127
+msgid "English"
+msgstr ""
+
+#: .\transferdeneme\settings.py:128
+msgid "Turkish"
+msgstr ""
+
+#: .\transferdeneme\settings.py:129
+msgid "German"
+msgstr ""
+
+#: .\transferdeneme\settings.py:130
+msgid "Russian"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Hakkımızda"
+#~ msgid "Hakkımızda kısmı"
+#~ msgstr "About"
+
+#~ msgid "Hakkımızda"
+#~ msgstr "About"
+
+#~ msgid " Kişi"
+#~ msgstr " Person"

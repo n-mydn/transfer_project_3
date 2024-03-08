@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block r_query %}
+{% load i18n %}
+<style>
+    .carousel-inner{
+        clip-path: ellipse(100% 100% at 50% 0%);
+    }
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto; 
+    }
+    @media (max-width: 640px) {
+        .carousel-inner {
+            margin-top: 43px;
+        }
+    }
+</style>
+
+<div class="carousel-inner">
+    <div class="carousel-item active" >
+        <img src="../media/img_1_sorgu.jpg" class="img-fluid">
+        <div class="carousel-caption d-flex flex-column justify-content-center h-100 text-start"> 
+            <h5 style="font-size: 20px; color: #C19A6B;">
+                <span class="border border-secondary-subtle border-3 p-2 rounded" style="display: inline-block; backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.1); padding: 8px; border-radius: 8px;">
+                    {% trans "REZERVASYON SORGULA" %}
+                </span>
+            </h5>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class="d-img"> 
+    <img src="../media/img_1.jpg" class="img-fluid">
+</div>
+-->
+
+{% endblock%}
+
+{% block body %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="border border-tertiary p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+        &ensp;
+            <h6 style ="color: #8b4513;">&emsp;{% trans "Rezervasyon Sorgula" %}</h6>
+            <hr color="#764409" size="4">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="col">
+                    <b><label for="email" style = "color:#764409;">{% trans 'Rezervasyon No' %}:</label></b><br>
+                    {{form.no}}<br>
+                </div>
+                <div class="col">
+                    <b><label for="email" style = "color:#764409;">{% trans 'E-Posta' %}:</label></b><br>
+                    {{form.email}}<br>
+                </div>
+                <div class="d-flex justify-content-end ">
+                    <button class="r_button" type="submit" style="background-color:#764409;border-color:#764409;color:white;width:250px;height:40px;font-size:14px;border-radius:2px;">{% trans 'Rezervasyon Sorgula' %}</button>
+                </div>
+            </form>
+            &ensp;
+        </div>
+    </div>
+</div>
+{% endblock  %}

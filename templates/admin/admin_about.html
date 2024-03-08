@@ -1,0 +1,173 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="d-flex justify-content-end ">  
+    <button class="btn btn-secondary" style="background: #D2B48C;" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Güncelleme Yapmak İçin Tıklayınız
+    </button>
+</div>
+<div class="collapse" id="collapseExample">
+    <br>
+    <div class="border border-tertiary p-3 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+    <br>
+    <form  method="POST" enctype="multipart/form-data" >
+        {{form.media}}
+        {% csrf_token %}
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Türkçe 
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <b><label for="content" style = "color:#764409;">İçerik: </label></b>
+                                    <br>{{form.content}}
+                                <br> 
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            İngilizce
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                                <b><label for="content_en" style = "color:#764409;">İçerik: </label></b>
+                                    <br><div class="django-ckeditor-widget" data-field-id="id_content_en" style="display: inline-block;">
+                            <textarea name="content_en" cols="40" rows="10" required id="id_content_en" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;100%&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;removePlugins&quot;: &quot;stylesheetparser&quot;, &quot;allowedContent&quot;: true, &quot;language&quot;: &quot;tr&quot;}" data-external-plugin-resources="[]" data-id="id_content_en" data-type="ckeditortype">{{content_en}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Almanca
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                                <b><label for="content_de" style = "color:#764409;">İçerik: </label></b>
+                                    <br><div class="django-ckeditor-widget" data-field-id="id_content_de" style="display: inline-block;">
+                            <textarea name="content_de" cols="40" rows="10" required id="id_content_de" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;100%&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;removePlugins&quot;: &quot;stylesheetparser&quot;, &quot;allowedContent&quot;: true, &quot;language&quot;: &quot;tr&quot;}" data-external-plugin-resources="[]" data-id="id_content_de" data-type="ckeditortype">{{content_de}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Rusça
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                                <b><label for="content_ru" style = "color:#764409;">İçerik: </label></b>
+                                    <br><div class="django-ckeditor-widget" data-field-id="id_content_ru" style="display: inline-block;">
+                            <textarea name="content_ru" cols="40" rows="10" required id="id_content_ru" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;100%&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;removePlugins&quot;: &quot;stylesheetparser&quot;, &quot;allowedContent&quot;: true, &quot;language&quot;: &quot;tr&quot;}" data-external-plugin-resources="[]" data-id="id_content_ru" data-type="ckeditortype">{{content_ru}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="d-flex justify-content-end ">
+                <button type="submit" style="background-color:#D2B48C;border-color:#D2B48C;color:white;width:250px;height:40px;font-size:14px;border-radius:4px;">Güncellle</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<br>
+<h5 style="color:#a9a9a9;">Biz Kimiz?</h5>
+<hr color="#764409" size="5"><br>
+<div class="accordion" id="accordionExample">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-6 col-sm-3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Türkçe
+                      </button>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        İngilizce
+                      </button>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Almanca
+                      </button>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Rusça
+                      </button>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <br>
+        <div class="accordion-body">
+           {{content|safe}}
+        </div>
+    </div>
+ 
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <br>
+        <div class="accordion-body">
+            {{content_en|safe}}
+        </div>
+    </div>
+
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <br>
+        <div class="accordion-body">
+           {{content_de|safe}}
+        </div>
+    </div>
+
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <br>
+        <div class="accordion-body">
+           {{content_ru|safe}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

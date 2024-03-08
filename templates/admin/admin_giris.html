@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
+    <title>Transfer Admin</title>
+</head>
+<body>
+    
+    <div style="margin-top: 100px; margin-bottom:100px;" class="container">
+        
+        {% if messages %}
+            {% for message in messages %}
+                
+                {% if message.tags == "info" %}
+                    <div class="alert alert-danger">{{ message }}</div>
+            
+                {% else %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+
+                {% endif %}
+            {% endfor %}
+
+        {% endif %}
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="border border-tertiary p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+                    &ensp;
+                    <h5 style="color:#a9a9a9;">Admin Giriş</h5>
+                    <hr color="#764409" size="5">
+                    <form method="POST" >
+                        {% csrf_token %}
+                        <b><label for="fromwhere" style = "color:#764409;">Kullanıcı Adı:</label></b>
+                        {{form.username}}<br>
+                        <b><label for="towhere" style = "color:#764409;">Şifre:</label></b>
+                        {{form.password}}<br>
+                        <div class="d-flex justify-content-end ">
+                            <button class="r_button" type="submit" style="background-color:#764409;border-color:#764409;color:white;width:250px;height:40px;font-size:14px;border-radius:2px;">Giriş Yap</button>
+                        </div>
+                        &ensp;
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}" ></script>
+</body>
+</html>

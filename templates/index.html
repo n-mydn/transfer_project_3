@@ -1,0 +1,416 @@
+{% extends 'layout.html' %}
+
+{% block image %}
+{% load static %}
+{% load i18n %}
+<style>
+    .c-item {
+        height: 550px;
+    }
+    
+    .c-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-inner{
+        clip-path: ellipse(100% 100% at 50% 0%);
+
+    }
+    .carousel-form {
+        background: rgba(0,0,0,0.5);
+        border: solid 4px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 20px;
+        position: absolute;
+    }
+    @media (max-width: 1199px) {
+            .carousel-form {
+                top:325px;
+            }
+        }
+
+</style>
+<!--        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);-->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active c-item" >
+            <img src="../media/img_2.jpg" class="d-block w-100 c-img">
+
+        </div>
+        <div class="carousel-item c-item"> 
+            <img src="../media/img_1.jpg" class="d-block w-100 c-img">
+            
+        </div>
+        </div>
+        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <div class="carousel-form">
+        <div class="container text-center" > 
+            <h2 class="sf-title" style="color:#fff8e1;">{% trans 'XTransfer Havalimanı Otel Transfer' %}</h2> 
+            
+            <form class="mt-5 fs-5 text-uppercase" method="POST"  ><!--GET  yapabilirsin -->
+                {% csrf_token %}
+                <div class="container" style="background: #fff8e1;border-radius: 10px;padding-right: 9px;padding-left: 9px;margin-right: auto;margin-left: auto;"> 
+                <!--<div class="input-group mb-3">-->
+                    <div class="row" >
+                        <div class="col" style="margin-bottom: 8px;">
+                        <b><label for="fromwhere" style = "color:#764409;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 18 18">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>{% trans 'Nereden' %}:</label></b>
+                         {{form.fromwhere}} <!--&ensp;&ensp;-->
+                        </div>
+                        <div class="col">
+                            <b><label for="towhere" style = "color:#764409;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 18 18">
+                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>{% trans 'Nereye' %}:</label></b>
+                            {{form.towhere}}<!--&ensp;&ensp; -->
+                        </div>
+                        <div class="col">
+                            <div class="dropdown" >
+                                <b><label style = "color:#764409;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 20 20">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                  </svg>{% trans 'Kişi Sayısı' %}: </label></b>
+                                <button style="background-color:#ffffff;height:26px;width:100px;border-style:solid;border-width:1px;font-size:14px;border-radius:2px;" type="button" id="result" data-bs-toggle="dropdown" value="result" data-bs-display="static" aria-expanded="false">1 {% trans 'Kişi' %}</button>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" style="border-color: #764409;">
+                                    <button type="button" class="btn-close" aria-label="Close" style="float:right"></button><br>
+                                    &ensp;<b><label for="adultnumber" style = "color:#764409;">{% trans 'Yetişkin' %}: </label></b>
+                                    {{form.adultnumber}}&ensp;<br>
+                                    &ensp;&ensp;<b><label for="childrennumber" style = "color:#764409;">&ensp;{% trans 'Çocuk' %}: </label></b>
+                                    {{form.childrennumber}}&ensp;
+                    
+                                </ul>
+                            </div>
+                        </div>&ensp;
+                        <script src="{% static 'js/numberofpeople.js' %}"></script>
+                        <div class="col" style="margin-top: 10px;">
+                            <button type="submit" style="background-color:#764409;border-color:#764409;color:white;height:40px;font-size:14px;border-radius:2px;">{% trans 'Transfer Ara' %} </button>
+                        </div>
+                    </div> 
+                </div>
+        
+            <form>
+        
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+<!--
+                        <form class="mt-5 fs-5 text-uppercase" method="POST" enctype="multipart/form-data" >
+                            {% csrf_token %}
+                            <div class="container" style="background: #ffffff;"> 
+                            <div class="input-group mb-3"> Silinebilir yorum
+                                <div class="row">
+                                    <div class="col">
+                                    <b><label for="fromwhere" style = "color:#764409;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 18 18">
+                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg>Nereden:&ensp;</label></b>
+                                    {{form.fromwhere}} &ensp;&ensp; Silinebilir
+                                    </div>
+                                    <div class="col">
+                                        <b><label for="towhere" style = "color:#764409;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 18 18">
+                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>Nereye:&ensp;</label></b>
+                                        {{form.towhere}}&ensp;&ensp; Silinebilir
+                                    </div>
+                                    <div class="col">
+                                <b><label for="adultnumber" style = "color:#764409;">Yetişkin:&ensp;</label></b>
+                                {{form.adultnumber}}&ensp;&ensp;
+                                    </div>
+                                    <div class="col">
+                                <b><label for="childrennumber" style = "color:#764409;">Çocuk:&ensp;</label></b>
+                                {{form.childrennumber}}&emsp;&emsp;
+                                    
+                                    
+                                <button type="submit" style="background-color:#764409;border-color:#764409;color:dark;height:30px;">Transfer Ara</button>
+                                    </div>    
+-->
+
+
+{% block body %}
+<br>
+<div class="container text-center">
+    <div class="row row-cols-3">
+        {% for article_one in article_one %}
+            <div class="col-sm" >
+                <div class="row">
+                    <div class="col col-lg-4">
+                        <img src="{{article_one.image.url}}">
+                    </div>
+                    <div class="col">
+                        <h6 style="color:#764409 "><b>{{article_one.title}}</b></h6>
+                        <p style="color:#826100 ">{{article_one.content}}</p>
+                    </div>  
+                </div>              
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<br><br><br>
+<style>
+    .no{
+        font-size: 60px;
+        color: rgb(0 0 0 / 0.1);
+    }
+</style>
+<hr color="#764409" size="5">
+<div class="text-center">
+    <h5 style="color:#a9a9a9;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+            {% trans "TRANSFER REZERVASYONU YAPMAK ÇOK KOLAY" %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+          </svg>
+    </h5>
+</div>
+<hr color="#764409" size="5">
+<div class="container text-center">
+    <div class="row">
+        {% for article_two in articles_two %}
+            <div class="col-sm" >
+                <div class="row">
+                    <div class="col-sm-12" >
+                        <div class="no">
+                            {{article_two.id}}&ensp;
+                            <img src="{{article_two.image.url}}">
+                        </div>
+                    </div>
+                    &emsp;
+                    <div class="col-sm-12">
+                        <h6 style="color:#764409 "><b>{{article_two.title}}</b></h6>
+                        <p style="color:#826100 ">{{article_two.content}}</p>
+                    </div>  
+                </div>            
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<br><br>
+
+<hr color="#764409" size="5">
+<div class="text-center">
+    <h5 style="color:#a9a9a9;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+            {% trans "TRANSFER TÜRLERİ VE ARAÇLARIMIZ" %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+          </svg>
+    </h5>
+</div>
+<hr color="#764409" size="5">
+<style>
+    .card-img-top{
+        width: 350px;
+        height: 200px;
+        object-fit: fill;
+        border-radius: 15px;
+    }
+    .card{
+        transition: transform 0.5s, box-shadow 0.5s;
+    }
+    .card:hover {
+        transform: scale(1.0);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+</style>
+<div class="container">
+    <div class="row justify-content-evenly">
+        <div class="col-md-4">
+            <a href="{% url 'vip_transfer_with_driver' %}" style="text-decoration:none">
+            <div class="card" style="width: 25rem; height: 25rem;">
+                <img src="../media/vito.jpg" class="card-img-top p-2" >
+                <div class="card-body">
+                    <h5 class="card-title" style="color:#764409">{% trans "Özel Sürücülü Vip Transfer" %}</h5>
+                    <ul class="card-text" style="color:#826100;">
+                        <li>{% trans "Şoförlü Özel Kiralama" %}</li>
+                        <li>{% trans "Size Özel Karşılama Hizmeti" %}</li>
+                        <li>{% trans "Size Özel Araç" %}</li>
+                    </ul>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'shuttle_transfer' %}" style="text-decoration:none">
+            <div class="card" style="width: 25rem; height: 25rem;">
+                <img src="../media/car1.jpg" class="card-img-top p-2 " >
+                <div class="card-body">
+                    <h5 class="card-title" style="color:#764409">{% trans "Paylaşımlı Transfer" %}</h5>
+                    <ul class="card-text" style="color:#826100;">
+                        <li>{% trans "13 Kişilik Minibüsler" %}</li>
+                        <li>{% trans "Paylaşımlı Yolculuk" %}</li>
+                        <li>{% trans "Önceden Belirlenmiş Buluşma Noktası" %}</li>
+                        <li>{% trans "Paylaşımlı Transfer ve Benzeri" %}</li>
+                    </ul>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<style>
+    img {
+        width: 150px;
+        height: 85px;
+        object-fit: fill; 
+      }
+    .img-media {
+        transition: transform 0.5s, box-shadow 0.5s;
+    }
+    .img-media:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+</style>
+<hr color="#764409" size="5">
+<div class="text-center">
+    <h5 style="color:#a9a9a9;">{% trans "POPÜLER YERLER" %}</h5>
+</div>
+<hr color="#764409" size="5">
+<div class="container text-center">
+    <div class="row align-items-center">
+        <div class="col-6 col-sm-4">
+            <div class="border border-tertiary p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+                <a href="{% url 'antalya' %}" style="text-decoration:none">
+                    <div class="row">
+                        <div class="col-md-4"><img class="img-media rounded" src="../media/antalya.jpg"  alt="Antalya Şehir Merkezi"></div>
+                        <div class="col-md-8" style="margin-top: 10px; font-size:15px; color:#826100 ">
+                            <p><b>{% trans "Antalya Transfer" %}</b></p>
+                            <small>{{car_antalya}} ₺ {% trans "başlayan fiyatlarla" %}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4">
+            <div class="border border-tertiary p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+                <a href="{% url 'alanya' %}" style="text-decoration:none">
+                    <div class="row">
+                        <div class="col-md-4"><img class="img-media rounded" src="../media/popular2.png" alt="Alanya Şehir Merkezi"></div>
+                        <div class="col-md-8" style="margin-top: 10px; font-size:15px; color:#826100 ">
+                            <p><b>{% trans "Alanya Transfer" %}</b></p>
+                            <small>{{car_alanya}} ₺ {% trans "başlayan fiyatlarla" %}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4">
+            <div class="border border-tertiary p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+                <a href="{% url 'side' %}" style="text-decoration:none">
+                    <div class="row">
+                        <div class="col-md-4"><img class="img-media rounded" src="../media/side.jpg" alt="Side"></div>
+                        <div class="col-md-8" style="margin-top: 10px; font-size:15px; color:#826100 ">
+                            <p><b>{% trans "Side Transfer" %}</b></p>
+                            <small>{{car_alanya}} ₺ {% trans "başlayan fiyatlarla" %}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+<hr color="#764409" size="5">
+<div class="text-center">
+    <h5 style="color:#a9a9a9;">{% trans "GALERİ" %}</h5>
+</div>
+<hr color="#764409" size="5">
+<div class="container text-center">
+    <style>
+        .col-md-3 img {
+            width: 250px;
+            height: 150px;
+            object-fit: fill; 
+          }
+        .col-md-3 img {
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        .col-md-3 img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <div class="row align-items-center">
+        <div class="row">
+            {% for image in images %}
+                <div class="col-md-3">
+                    <img class="rounded" src="{{image.image.url}}">
+                </div>
+            {% endfor %}
+            </div>
+    </div>
+    <br>
+    <a href="{% url 'gallery' %}" class="btn btn-secondary" style="background: #D2B48C;">{% trans "Tüm Fotoğraflar" %}</a>
+</div>
+<br><br><br>
+
+<hr color="#764409" size="5">
+<div class="text-center">
+    <h5 style="color:#a9a9a9;">{% trans "YORUMLAR" %}</h5>
+</div>
+<hr color="#764409" size="5">
+<div class="container text-center">
+
+</div>
+{% endblock  %}
+
+
+<!--  body kısmı
+<hr color="#764409" size="5">
+<div class="text-center">
+    <h5 style="color:#a9a9a9;">{% trans "POPÜLER YERLER" %}</h5>
+</div>
+<hr color="#764409" size="5">
+<div class="container text-center">
+    <div class="row align-items-center">
+        {% for popular in populars  %}
+            <div class="col-6 col-sm-4">
+                <div class="border border-tertiary p-2 mb-2 border-opacity-25 rounded-2" style="background: #fcfcfc;" >
+                    <div class="row">
+                        {% if popular.towhere == "Antalya Şehir Merkezi" or popular.towhere == "Antalya City Center" or popular.towhere == "Stadtzentrum von Antalya"  %}
+                        <a href="{% url 'antalya_sehir_merkezi' %}">
+                            <div class="col-md-6"><img class="img-fluid rounded" src="{{popular.image.url}}" width="150" height="150" alt="{{popular.towhere}}"></div>
+                            <div class="col-md-6" style="margin-top: 25px; font-size:12px; color:#826100 ">
+                                <b>{{popular.fromwhere}}
+                                &emsp;<p style="font-size:14px; color:#764409">{{popular.towhere}}</b>
+                            </div>
+                        </a>
+                        {% endif %}
+                        
+                        <div class="col-md-6"><img class="img-fluid rounded" src="{{popular.image.url}}" width="150" height="150" alt="{{popular.towhere}}"></div>
+                        <div class="col-md-6" style="margin-top: 25px; font-size:12px; color:#826100 ">
+                            <b>{{popular.fromwhere}}
+                            &emsp;<p style="font-size:14px; color:#764409">{{popular.towhere}}</b>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+-->
